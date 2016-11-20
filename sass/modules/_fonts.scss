@@ -1,0 +1,50 @@
+$mainFontRegular: 'merlomedium';
+$mainFontItalic: 'merlomedium_italic';
+$mainFontBold: 'merlobold';
+$headingFont: 'cervo_neuebold_neue';
+
+html {
+    font-family: "merlomedium", sans-serif !important;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust:     100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "cervo_neuebold_neue", sans-serif !important;
+}
+
+@font-face {
+    font-family: 'cervo_neuebold_neue';
+    src: url('/wp-content/themes/oficyna_peryferie/fonts/cervoneue-boldneue-webfont.woff2') format('woff2'),
+         url('/wp-content/themes/oficyna_peryferie/fonts/cervoneue-boldneue-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'merlomedium';
+    src: url('/wp-content/themes/oficyna_peryferie/fonts/merlo-medium-webfont.woff2') format('woff2'),
+         url('/wp-content/themes/oficyna_peryferie/fonts/merlo-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'merlomedium_italic';
+    src: url('/wp-content/themes/oficyna_peryferie/fonts/merlo-mediumitalic-webfont.woff2') format('woff2'),
+         url('/wp-content/themes/oficyna_peryferie/fonts/merlo-mediumitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'merlobold';
+    src: url('/wp-content/themes/oficyna_peryferie/fonts/merlo-bold-webfont.woff2') format('woff2'),
+         url('/wp-content/themes/oficyna_peryferie/fonts/merlo-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

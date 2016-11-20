@@ -17,11 +17,16 @@
             //         $('#go-up').removeClass('no-show');
             //     }
             // })
-			console.log('test');
         }
+
+		function customLiveComposer() {
+			$('#content').removeClass('container').addClass('contaier-fluid');
+            $('.custom > div').attr('class', '').addClass('container');
+		}
 
         function init() {
            slideUp();
+		   customLiveComposer();
         }
 
         return {
