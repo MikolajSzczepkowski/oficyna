@@ -1,16 +1,16 @@
-$mainFontRegular: 'merlomedium';
-$mainFontItalic: 'merlomedium_italic';
-$mainFontBold: 'merlobold';
-$headingFont: 'cervo_neuebold_neue';
+$mainFontRegular: 'merlomedium', sans-serif;
+$mainFontItalic: 'merlomedium_italic', sans-serif;
+$mainFontBold: 'merlobold', sans-serif;
+$headingFont: 'cervo_neuebold_neue', sans-serif;
 
 html {
-    font-family: "merlomedium", sans-serif !important;
+    font-family: $mainFontBold !important;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust:     100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "cervo_neuebold_neue", sans-serif !important;
+	font-family: $headingFont !important;
 }
 
 @font-face {

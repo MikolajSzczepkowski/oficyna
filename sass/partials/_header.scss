@@ -1,0 +1,27 @@
+//scroll down button
+.btn-hero-default {
+	background-color: transparent !important;
+	font-family: $headingFont !important;
+	font-size: 18px !important;
+	color: $blue !important;
+	text-decoration: underline;
+	&:hover {
+		color: $black !important;
+		text-decoration: underline !important;
+	}
+}
+
+//menu button on mobile
+.menu-mobile {
+	position: absolute !important;
+	top: 18px;
+	right: 0;
+	left: 0;
+	width: 85px;
+	margin: auto !important;
+	background-color: transparent !important;
+	border: 0 !important;
+	font-size: 20px;
+	color: $blue !important;
+	text-decoration: underline;
+}

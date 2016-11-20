@@ -254,11 +254,10 @@
 				<div class="container">
 
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header-navigation">
+						<button type="button" class="navbar-toggle menu-mobile" data-toggle="collapse" data-target="#header-navigation">
 							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
+							menu
+							<span class="glyphicon glyphicon-chevron-down"></span>
 						</button>
 						<a class="navbar-brand site-logo" href="<?php echo home_url(); ?>">
 							<?php if ( willow_option( 'header_logo' ) ) : ?>
