@@ -2,3 +2,18 @@
 	width: 100%;
 	padding: 0;
 }
+
+.about {
+	.icon {
+		&::before {
+			top: 12px;
+		}
+	}
+	h6 {
+		position: relative;
+		color: $blue;
+		.line {
+			top: 12px;
+		}
+	}
+}

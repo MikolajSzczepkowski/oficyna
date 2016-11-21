@@ -11,17 +11,49 @@
 	}
 }
 
+//pre-loader bar color
+#jpreOverlay #jpreLoader #jpreBar{
+	background: $blue;
+}
+
 //menu button on mobile
-.menu-mobile {
-	position: absolute !important;
-	top: 18px;
-	right: 0;
-	left: 0;
-	width: 85px;
-	margin: auto !important;
-	background-color: transparent !important;
-	border: 0 !important;
-	font-size: 20px;
-	color: $blue !important;
-	text-decoration: underline;
+.navbar-header {
+	position: relative;
+	.menu-mobile {
+		position: absolute !important;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 120px;
+		margin: auto !important;
+		background-color: transparent !important;
+		border: 0 !important;
+		color: $blue !important;
+		.menu-mobile-text {
+			font-size: 20px;
+			text-decoration: underline;
+		}
+		.glyphicon {
+			padding-left: 10px;
+			font-size: 16px;
+		}
+	}
+}
+
+//menu elements
+.nav {
+	li {
+		a {
+			color: $blue !important;
+			font-family: $headingFont;
+			&:hover {
+				color: $black !important;
+			}
+			.glyphicon {
+				padding-left: 5px;
+				font-size: 10px;
+			}
+		}
+	}
 }
