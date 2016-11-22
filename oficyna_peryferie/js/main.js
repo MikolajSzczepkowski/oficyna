@@ -19,13 +19,6 @@
             // })
         }
 
-		function customLiveComposer() {
-            var line = $("<span/>", {class: 'line'});
-			$('#content').removeClass('container').addClass('contaier-fluid');
-            $('.custom > div').addClass('container');
-            $('.custom h6').append(line);
-		}
-
         function menuArrow() {
             var arrow = $("<span/>", {class: 'glyphicon glyphicon-chevron-down'});
             $(".menu-item-has-children > a").append(arrow);
@@ -33,7 +26,6 @@
 
         function init() {
            slideUp();
-		   customLiveComposer();
            menuArrow();
         }
 

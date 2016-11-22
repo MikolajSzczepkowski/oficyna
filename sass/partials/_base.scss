@@ -1,38 +1,32 @@
 h1, h2, h3, h4, h5, h6 {
-	color: $blue;
+	color: $blue !important;
 }
 
-.icon {
-	&::before {
-		content: '';
-		position: absolute;
-		width: 26px;
-		height: 26px;
-		background-image: url('/wp-content/themes/oficyna_peryferie/images/icon.png');
+// icon border
+.vc_icon_element-inner.vc_icon_element-color-custom.vc_icon_element-have-style-inner.vc_icon_element-size-xs.vc_icon_element-style-boxed-outline.vc_icon_element-outline.vc_icon_element-background-color-custom {
+	width: 1.2em !important;
+	height: 1.2em !important;
+	transform: rotate(45deg)!important;
+	.vc_icon_element-icon.fa.fa-circle {
+		font-size: 1em!important;
 	}
 }
 
-.custom {
-	> div {
-		@media (min-width: 768px) {
-			width: 750px !important;
-		}
-		@media (min-width: 992px) {
-			width: 970px !important;
-		}
-		@media (min-width: 1200px) {
-			width: 1170px !important;
+.img-caption {
+	p {
+		color: $blue;
+		span {
+			font-style: italic;
 		}
 	}
 }
 
-.line {
-	position: absolute;
-	right: 0;
-	width: 75%;
-	height: 1px;
-	background-color: $blue;
-	@media (min-width: 768px) {
-		right: 12%;
+// heading
+h2 {
+	font-size: 4em!important;
+	line-height: 1!important;
+	letter-spacing: .1em!important;
+	@include desktop {
+		font-size: 8em!important;
 	}
 }

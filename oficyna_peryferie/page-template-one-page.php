@@ -32,7 +32,7 @@
 	<?php else : ?>
 
 		<section id="content" class="content-section section">
-			<div class="container container-table">
+			<div class="container-fluid container-table">
 
 				<div class="main-section" role="main">
 
