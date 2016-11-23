@@ -3,13 +3,13 @@ $medium: 992px;
 $large: 1200px;
 
 @mixin tablet {
-  @media (min-width: #{$small}) and (max-width: #{$medium - 1px}) {
+  @media (min-width: #{$small}) {
     @content;
   }
 }
 
 @mixin netbook {
-  @media (min-width: #{$medium}) and (max-width: #{$large - 1px}) {
+  @media (min-width: #{$medium}) {
     @content;
   }
 }

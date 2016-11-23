@@ -9,6 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 	transform: rotate(45deg)!important;
 	.vc_icon_element-icon.fa.fa-circle {
 		font-size: 1em!important;
+		transform: translate(-50%,-54%)!important;
 	}
 }
 
@@ -28,5 +29,32 @@ h2 {
 	letter-spacing: .1em!important;
 	@include desktop {
 		font-size: 8em!important;
+	}
+}
+
+.oficyna-button {
+	a {
+		border: 1px solid $blue !important;
+		background-image: none !important;
+		&::after {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: -5px;
+			right: -5px;
+			width: 100%;
+			height: 100%;
+			background: $white;
+			border: 1px solid $blue;
+		}
+		&:hover {
+			color: $white !important;
+			background: $blue !important;
+			background-image: none !important;
+			text-decoration: underline !important;
+			&::after {
+				background: $rose;
+			}
+		}
 	}
 }

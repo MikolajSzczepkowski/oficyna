@@ -1,32 +1,54 @@
-(function ($) {
+(function (jQuery) {
 
     'use strict';
 
     var PageController = function () {
 
         function slideUp() {
-            // $('body').append($('<button id="go-up" class="no-show">↑</button>'));
-            // $('#go-up').on('click', function() {
-            //     $("html, body").animate({scrollTop: 0}, 1000);
+            // jQuery('body').append(jQuery('<button id="go-up" class="no-show">↑</button>'));
+            // jQuery('#go-up').on('click', function() {
+            //     jQuery("html, body").animate({scrollTop: 0}, 1000);
             //     return false;
             // });
-            // $(window).on('scroll', function() {
-            //     if ($(document).scrollTop() < 100) {
-            //         $('#go-up').addClass('no-show');
+            // jQuery(window).on('scroll', function() {
+            //     if (jQuery(document).scrollTop() < 100) {
+            //         jQuery('#go-up').addClass('no-show');
             //     } else {
-            //         $('#go-up').removeClass('no-show');
+            //         jQuery('#go-up').removeClass('no-show');
             //     }
             // })
         }
 
         function menuArrow() {
-            var arrow = $("<span/>", {class: 'glyphicon glyphicon-chevron-down'});
-            $(".menu-item-has-children > a").append(arrow);
+            var arrow = jQuery("<span/>", {class: 'glyphicon glyphicon-chevron-down'});
+            jQuery(".menu-item-has-children > a").append(arrow);
+        }
+
+        function offerModuleController() {
+            var imageContainer = jQuery(".offer-inner-module-img img");
+            var initialSrc = imageContainer.attr("src");
+            var offerMap = {
+                "WYDAWNICTWO": "/wp-content/themes/oficyna_peryferie/images/wydawnictwo.png",
+                "SITODRUK": "/wp-content/themes/oficyna_peryferie/images/sitodruk.png",
+                "RISO": "/wp-content/themes/oficyna_peryferie/images/riso.png",
+                "WARSZTATY": "/wp-content/themes/oficyna_peryferie/images/warsztaty.png",
+                "INTROLIGATORSTWO": "/wp-content/themes/oficyna_peryferie/images/introligatorstwo.png"
+            };
+            jQuery(".offer-module").on("mouseenter", function() {
+                var currentModule = jQuery(this).find("h3 span").text();
+                var newSrc = offerMap[currentModule];
+
+                imageContainer.attr("src", newSrc);
+            });
+            jQuery(".offer-module").on("mouseleave", function() {
+                imageContainer.attr("src", initialSrc);
+            });
         }
 
         function init() {
            slideUp();
            menuArrow();
+           offerModuleController();
         }
 
         return {
