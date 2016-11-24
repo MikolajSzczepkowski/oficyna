@@ -3,13 +3,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // icon border
-.vc_icon_element-inner.vc_icon_element-color-custom.vc_icon_element-have-style-inner.vc_icon_element-size-xs.vc_icon_element-style-boxed-outline.vc_icon_element-outline.vc_icon_element-background-color-custom {
-	width: 1.2em !important;
-	height: 1.2em !important;
-	transform: rotate(45deg)!important;
-	.vc_icon_element-icon.fa.fa-circle {
-		font-size: 1em!important;
-		transform: translate(-50%,-54%)!important;
+.separator {
+	.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-size-xs.vc_icon_element-have-style-inner {
+		width: 1.2em !important;
+		height: 1.2em !important;
+	}
+	.vc_icon_element {
+		.vc_icon_element-inner {
+			transform: rotate(45deg)!important;
+			.vc_icon_element-icon.fa.fa-circle {
+				font-size: 1em!important;
+			}
+		}
+	}
+}
+.separator-white {
+	h4 {
+		color: $white!important;
 	}
 }
 
@@ -24,9 +34,15 @@ h1, h2, h3, h4, h5, h6 {
 
 // heading
 h2 {
-	font-size: 4em!important;
+	font-size: 2em!important;
 	line-height: 1!important;
 	letter-spacing: .1em!important;
+	@media (min-width: 360px) {
+	  font-size: 3em!important;
+	}
+	@media (min-width: 600px) {
+	  font-size: 4em!important;
+	}
 	@include desktop {
 		font-size: 8em!important;
 	}
@@ -55,6 +71,17 @@ h2 {
 			&::after {
 				background: $rose;
 			}
+		}
+	}
+}
+
+.vc_general.vc_pagination.vc_pagination-style-outline.vc_pagination-shape-round.vc_pagination-color-blue {
+	a {
+		border-color: $blue !important;
+	}
+	.vc_active {
+		a {
+			background-color: $blue !important;
 		}
 	}
 }
