@@ -5,18 +5,18 @@
     var PageController = function () {
 
         function slideUp() {
-            // jQuery('body').append(jQuery('<button id="go-up" class="no-show">↑</button>'));
-            // jQuery('#go-up').on('click', function() {
-            //     jQuery("html, body").animate({scrollTop: 0}, 1000);
-            //     return false;
-            // });
-            // jQuery(window).on('scroll', function() {
-            //     if (jQuery(document).scrollTop() < 100) {
-            //         jQuery('#go-up').addClass('no-show');
-            //     } else {
-            //         jQuery('#go-up').removeClass('no-show');
-            //     }
-            // })
+            jQuery('body').append(jQuery('<button id="go-up" class="no-show">POWRÓT DO GÓRY</button>'));
+            jQuery('#go-up').on('click', function() {
+                jQuery("html, body").animate({scrollTop: 0}, 1000);
+                return false;
+            });
+            jQuery(window).on('scroll', function() {
+                if (jQuery(document).scrollTop() < 100) {
+                    jQuery('#go-up').addClass('no-show');
+                } else {
+                    jQuery('#go-up').removeClass('no-show');
+                }
+            })
         }
 
         function menuArrow() {

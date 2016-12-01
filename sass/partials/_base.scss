@@ -49,27 +49,45 @@ h2 {
 }
 
 .oficyna-button {
-	a {
+	position: relative;
+	z-index: 1;
+	> * {
+		position: relative;
+		min-width: 260px;
+		height: 50px;
 		border: 1px solid $blue !important;
 		background-image: none !important;
+		background-color: $white;
+		transition: all .2s ease-in-out;
 		&::after {
 			content: '';
 			position: absolute;
 			z-index: -1;
 			top: -5px;
 			right: -5px;
-			width: 100%;
-			height: 100%;
-			background: $white;
+			min-width: 260px;
+			height: 50px;
+			background-color: $white;
 			border: 1px solid $blue;
 		}
 		&:hover {
 			color: $white !important;
-			background: $blue !important;
+			background-color: $blue !important;
 			background-image: none !important;
 			text-decoration: underline !important;
 			&::after {
 				background: $rose;
+			}
+		}
+	}
+}
+
+.oficyna-button.negative {
+	> * {
+		&:hover {
+			border: 1px solid $rose !important;
+			&::after {
+				border: 1px solid $rose !important;
 			}
 		}
 	}
@@ -82,6 +100,72 @@ h2 {
 	.vc_active {
 		a {
 			background-color: $blue !important;
+		}
+	}
+}
+
+.newsletter-wrapper {
+	color: $white !important;
+	@include tablet {
+		display: block;
+		width: 75%;
+		margin: auto;
+	}
+	h3, h5, p {
+		text-align: center;
+		color: $white !important;
+	}
+	p {
+		padding-bottom: 50px;
+		@include tablet {
+			display: block;
+			width: 60%;
+			margin: auto;
+		}
+	}
+	h5 {
+		padding-top: 50px;
+		font-size: 12px;
+	}
+}
+
+.newsletter-form {
+	@include netbook {
+		display: block;
+		width: 650px;
+		margin: auto;
+	}
+	div {
+		width: 260px;
+		height: 50px;
+		margin: 20px auto;
+		@include netbook {
+			margin: 5px;
+			display: inline-block;
+			&:nth-of-type(1) {
+				width: 365px;
+			}
+		}
+		label {
+			width: 100%;
+			height: 100%;
+			input {
+				width: 100%;
+				height: 100%;
+				border: 0;
+				background-color: darken($blue, 10%);
+				&:nth-of-type(1) {
+					padding-left: 15px;
+				}
+			}
+			[type="submit"] {
+				background-color: transparent;
+				color: $blue !important;
+				&:hover {
+					color: $white !important;
+					text-decoration: underline !important;
+				}
+			}
 		}
 	}
 }
