@@ -23,7 +23,7 @@
 
 		wp_enqueue_script('oficyna_js');
 	}
-	add_action('wp_enqueue_scripts', 'oficyna_enqueue_scripts');
+	add_action('wp_enqueue_scripts', 'oficyna_enqueue_scripts',999);
 
 //oficyna
 

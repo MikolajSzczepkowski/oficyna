@@ -3,7 +3,6 @@
     'use strict';
 
     var PageController = function () {
-
         function slideUp() {
             jQuery('body').append(jQuery('<button id="go-up" class="no-show">POWRÓT DO GÓRY</button>'));
             jQuery('#go-up').on('click', function() {
@@ -45,10 +44,55 @@
             });
         }
 
+        function menuController() {
+            var windowWidth = window.innerWidth;
+            var navButton = jQuery(".navbar-header").find("button");
+            var submenuParent = jQuery(".menu-item-has-children");
+            jQuery(window).on("resize", function() {
+                windowWidth = window.innerWidth;
+            });
+            if (windowWidth < 992) {
+                var submenu = submenuParent.find(".sub-menu");
+                submenu.hide();
+                navButton.on("click", function() {
+                    if(!jQuery(this).parent().next().hasClass("in")) {
+                        jQuery(this).addClass("accordion-active");
+                    }
+                    else {
+                        jQuery(this).removeClass("accordion-active");
+                        submenuParent.removeClass("accordion-active");
+                    }
+                });
+                submenuParent.on("click", function(event) {
+                    var $this = jQuery(this);
+                    var currentSubmenu = jQuery(this).find(".sub-menu");
+                    event.preventDefault();
+                    submenu.slideUp();
+                    submenuParent.removeClass("accordion-active");
+                    currentSubmenu.slideDown();
+                    $this.addClass("accordion-active");
+                    return false;
+                });
+            }
+            if (windowWidth > 992) {
+                submenuParent.on("click", function(event) {
+                    event.preventDefault();
+                });
+                submenuParent.on("mouseenter", function() {
+                    var submenu = jQuery(this).find(".sub-menu");
+                    var submenuElement = submenu.find("li");
+                    var parentOffset = jQuery(this).offset();
+                    submenu.css("left", "-" + parentOffset.left + "px");
+                    submenuElement.css("left", parentOffset.left + "px");
+                });
+            }
+        }
+
         function init() {
            slideUp();
            menuArrow();
            offerModuleController();
+           menuController();
         }
 
         return {
