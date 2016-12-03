@@ -169,3 +169,19 @@ h2 {
 		}
 	}
 }
+
+#go-up {
+	position: fixed;
+	z-index: 9999;
+	top: 50%;
+	right: -30px;
+	transform: rotate(90deg);
+	background-color: transparent;
+	border: 0;
+	color: $blue;
+	text-decoration: underline;
+	transition: color 1s;
+	&:hover {
+		color: $black;
+	}
+}
