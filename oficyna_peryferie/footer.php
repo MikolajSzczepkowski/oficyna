@@ -9,20 +9,29 @@
 						<h5>OBIECUJEMY NIE SPAMOWAĆ. W KAŻDEJ CHWILI MOŻESZ WYPISAĆ SIĘ Z NEWSLETTERA.</h5>
 					</div>
 				</section>
-				<section>
-					<div>
-						<a href="#">fb</a>
-						<a href="#">insta</a>
-					</div>
+				<section class="footer-wrapper">
+					<ul>
+						<li>
+							<a href="#"><i class="fa fa-instagram"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-facebook-square"></i></a>
+						</li>
+					</ul>
 					<div>
 						<h5>
-							<span>©2016 <a href='<?php the_permalink(); ?>'>Oficyna peryferie</a>, ul. Stalowa 3, warszawa</span>
-							oficynaperyferie@gmail.com
+							©2016 <a href='<?php the_permalink(); ?>'>Oficyna peryferie</a>, ul. Stalowa 3, Warszawa<br>
+							<span>oficynaperyferie@gmail.com</span>
 						</h5>
 					</div>
-					<div>
-						<a href="#" target="_blank">KREACJA</a>
-					</div>
+					<ul>
+						<li>
+							<h5>KREACJA</h5><a href="https://www.behance.net/neilan" target="_blank"><div class="creation"></div></a>
+						</li>
+						<li>
+							<h5>REALIZACJA</h5><a href="https://github.com/MikolajSzczepkowski" target="_blank">MIKOŁAJ SZCZEPKOWSKI</a>
+						</li>
+					</ul>
 				</section>
 				<section>
 					<a href='<?php the_permalink(); ?>'>
