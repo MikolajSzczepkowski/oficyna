@@ -18,8 +18,9 @@
             })
         }
 
-        function menuArrow() {
+        function menuDecor() {
             var arrow = jQuery("<span/>", {class: 'glyphicon glyphicon-chevron-down'});
+            
             jQuery(".menu-item-has-children > a").append(arrow);
         }
 
@@ -48,9 +49,7 @@
             var windowWidth = window.innerWidth;
             var navButton = jQuery(".navbar-header").find("button");
             var submenuParent = jQuery(".menu-item-has-children");
-            jQuery(window).on("resize", function() {
-                windowWidth = window.innerWidth;
-            });
+
             if (windowWidth < 992) {
                 var submenu = submenuParent.find(".sub-menu");
                 submenu.hide();
@@ -63,7 +62,7 @@
                         submenuParent.removeClass("accordion-active");
                     }
                 });
-                submenuParent.on("click", function(event) {
+                submenuParent.off().on("click", function(event) {
                     var $this = jQuery(this);
                     var currentSubmenu = jQuery(this).find(".sub-menu");
                     event.preventDefault();
@@ -88,11 +87,16 @@
             }
         }
 
+        function checkWindowSize() {
+            jQuery(window).on("resize", menuController);
+        }
+
         function init() {
            slideUp();
-           menuArrow();
+           menuDecor();
            offerModuleController();
            menuController();
+           checkWindowSize();
         }
 
         return {
