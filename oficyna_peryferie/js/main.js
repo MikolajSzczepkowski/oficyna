@@ -18,9 +18,19 @@
             })
         }
 
+        function slideDown() {
+            jQuery('.js-anchor-link').on('click', function(event) {
+                event.preventDefault();
+                var pageHeight = window.innerHeight;
+                console.log(pageHeight);
+                jQuery("html, body").animate({scrollTop: pageHeight}, 1000);
+                return false;
+            });
+        }
+
         function menuDecor() {
             var arrow = jQuery("<span/>", {class: 'glyphicon glyphicon-chevron-down'});
-            
+
             jQuery(".menu-item-has-children > a").append(arrow);
         }
 
@@ -93,6 +103,7 @@
 
         function init() {
            slideUp();
+           slideDown();
            menuDecor();
            offerModuleController();
            menuController();
