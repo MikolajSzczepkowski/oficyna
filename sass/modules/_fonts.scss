@@ -3,7 +3,7 @@ $mainFontItalic: 'merlomedium_italic', sans-serif;
 $mainFontBold: 'merlobold', sans-serif;
 $headingFont: 'cervo_neuebold_neue', sans-serif;
 
-html {
+html, p {
     font-family: $mainFontBold !important;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust:     100%;

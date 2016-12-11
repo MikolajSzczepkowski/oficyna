@@ -51,6 +51,67 @@
 	}
 }
 
+.hit-module-separator {
+	position: relative;
+	z-index: 5;
+	top: 100px;
+    padding-left: 5px;
+	@include netbook {
+		position: absolute;
+		z-index: 5;
+		top: 250px;
+	}
+}
+.hit-module {
+	@include netbook {
+		background-size: 75% !important;
+	}
+	.vc_gitem-row-position-top {
+		@include netbook {
+			top: 30% !important;
+		}
+	}
+}
+.hit-module-bottom {
+	@include netbook {
+		position: absolute !important;
+		bottom: 12%;
+		right: 30px;
+	}
+	.product-autor {
+		margin-bottom: 15px;
+		color: $blue !important;
+		@include netbook {
+			text-align: center;
+		}
+	}
+	@media (max-width: 400px) {
+		.oficyna-button > * {
+			min-width: 195px;
+			&::after {
+				min-width: 195px;
+			}
+		}
+	}
+}
+
+.hit-workshop {
+	min-height: 500px;
+	font-size: 12px;
+	@include tablet {
+		font-size: initial;
+	}
+	.vc_gitem-row-position-middle {
+		top: 30% !important;
+		@include netbook {
+			top: 50% !important;
+		}
+	}
+	p {
+		color: $blue !important;
+	}
+}
+
 .offer-module {
 	hr {
 		width: 70px !important;

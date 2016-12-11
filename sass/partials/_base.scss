@@ -4,6 +4,9 @@ h1, h2, h3, h4, h5, h6 {
 
 // icon border
 .separator {
+	> div {
+		margin-bottom: 0 !important;
+	}
 	.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-size-xs.vc_icon_element-have-style-inner {
 		width: 1.2em !important;
 		height: 1.2em !important;
@@ -33,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // heading
-h2 {
+h2, .wpb_willow_big_title {
 	font-size: 2em!important;
 	line-height: 1!important;
 	letter-spacing: .1em!important;
@@ -45,6 +48,23 @@ h2 {
 	}
 	@include desktop {
 		font-size: 8em!important;
+	}
+}
+#title {
+	padding: 60px 0 0 0 !important;
+	.wpb_willow_big_title {
+		position: relative;
+    	z-index: 1;
+		margin-bottom: -25px;
+		@include tablet {
+			margin-bottom: -35px;
+		}
+		@include desktop {
+			margin-bottom: -60px;
+		}
+		span {
+			border: 0 !important;
+		}
 	}
 }
 
@@ -183,5 +203,38 @@ h2 {
 	transition: color 1s;
 	&:hover {
 		color: $black;
+	}
+}
+
+// .full-width {
+// 	position: relative;
+// 	left: -30px;
+// 	width: 100vw;
+// 	.vc_tta-panel-body {
+// 		border: 0 !important;
+// 	}
+// 	.separator {
+// 		padding-left: 30px;
+// 	}
+// }
+
+.blue-text {
+	color: $blue !important;
+}
+
+.cover-right {
+	.section-background {
+		background-position: center right !important;
+	}
+}
+
+.mobile-bg {
+	position: relative;
+	z-index: -1;
+	>.container {
+		background-color: rgba($white, .7);
+		@include tablet {
+			background-color: transparent;
+		};
 	}
 }

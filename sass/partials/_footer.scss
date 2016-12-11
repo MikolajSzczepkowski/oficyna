@@ -73,22 +73,24 @@
 	}
 }
 
-section:last-of-type {
-	@include tablet {
-		margin-top: 50px;
-	}
-	@include netbook {
-		padding-top: 50px;
-		padding-bottom: 100px;
-	}
-	a {
-		display: block;
-		width: 110px;
-		margin: auto;
-		cursor: pointer;
-		img {
+footer {
+	section:last-of-type {
+		@include tablet {
+			margin-top: 50px;
+		}
+		@include netbook {
+			padding-top: 50px;
+			padding-bottom: 100px;
+		}
+		a {
+			display: block;
 			width: 110px;
-			height: auto;
+			margin: auto;
+			cursor: pointer;
+			img {
+				width: 110px;
+				height: auto;
+			}
 		}
 	}
 }

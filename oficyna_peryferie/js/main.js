@@ -84,7 +84,7 @@
                 });
             }
             if (windowWidth > 992) {
-                submenuParent.on("click", function(event) {
+                submenuParent.find(">a").on("click", function(event) {
                     event.preventDefault();
                 });
                 submenuParent.on("mouseenter", function() {
