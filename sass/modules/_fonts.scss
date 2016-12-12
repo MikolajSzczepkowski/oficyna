@@ -9,7 +9,7 @@ html, p {
     -ms-text-size-adjust:     100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, strong {
 	font-family: $headingFont !important;
 }
 
@@ -47,4 +47,19 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     font-style: normal;
 
+}
+
+p, h4 {
+    font-size: 1.4em !important;
+    line-height: 1.3 !important;
+}
+
+.bigger-text {
+	font-size: 1.6em !important;
+	line-height: 1.5 !important;
+}
+
+em, strong {
+    font-size: .8em !important;
+    line-height: .5 !important;
 }

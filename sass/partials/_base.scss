@@ -238,3 +238,18 @@ h2, .wpb_willow_big_title {
 		};
 	}
 }
+.cut-top {
+	h2 {
+		position: relative;
+		top: -40px;
+		@include tablet {
+			top: -50px;
+		}
+		@include desktop {
+			top: -80px;
+		}
+	}
+}
+.uppercase {
+	text-transform: uppercase;
+}

@@ -171,10 +171,13 @@
 
 .latest-post {
 	@include tablet {
-		height: 500px !important;
+		height: 550px !important;
 	}
 	@include netbook {
-		height: 370px !important;
+		height: 450px !important;
+	}
+	@include desktop {
+		height: 400px !important;
 	}
 	.vc_gitem-row-position-top {
 		z-index: 1;
