@@ -15,7 +15,7 @@
 							<a href="#"><i class="fa fa-instagram"></i></a>
 						</li>
 						<li>
-							<a href="#"><i class="fa fa-facebook-square"></i></a>
+							<a href="https://www.facebook.com/oficynaperyferie/"><i class="fa fa-facebook-square"></i></a>
 						</li>
 					</ul>
 					<div>

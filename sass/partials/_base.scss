@@ -253,3 +253,12 @@ h2, .wpb_willow_big_title {
 .uppercase {
 	text-transform: uppercase;
 }
+.link-text {
+	a {
+		text-decoration: underline !important;
+		font-weight: 400;
+		&:hover {
+			color: $black;
+		}
+	}
+}
