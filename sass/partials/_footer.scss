@@ -67,8 +67,11 @@
 			}
 		}
 		span {
-			font-size: 23.5px;
+			font-size: 20px;
 			color: $blue !important;
+			@include tablet {
+				font-size: 23.5px;	
+			}
 		}
 	}
 }

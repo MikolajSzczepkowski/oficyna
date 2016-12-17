@@ -34,7 +34,7 @@
 					</ul>
 				</section>
 				<section>
-					<a href='<?php the_permalink(); ?>'>
+					<a href='<?php echo home_url(); ?>'>
 						<img src="<?php echo willow_option( 'preloader_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>" >
 					</a>
 				</section>
