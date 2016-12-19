@@ -75,7 +75,6 @@
                 submenuParent.find("a").off().on("click", function(event) {
                     var $this = jQuery(this).parent();
                     var currentSubmenu = $this.find(".sub-menu");
-                    event.preventDefault();
                     submenu.slideUp();
                     submenuParent.removeClass("accordion-active");
                     currentSubmenu.slideDown();

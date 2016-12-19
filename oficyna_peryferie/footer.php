@@ -12,7 +12,7 @@
 				<section class="footer-wrapper">
 					<ul>
 						<li>
-							<a href="#"><i class="fa fa-instagram"></i></a>
+							<a href="https://www.instagram.com/oficyna_peryferie/"><i class="fa fa-instagram"></i></a>
 						</li>
 						<li>
 							<a href="https://www.facebook.com/oficynaperyferie/"><i class="fa fa-facebook-square"></i></a>
@@ -21,7 +21,7 @@
 					<div>
 						<h5>
 							©2016 <a href='<?php the_permalink(); ?>'>Oficyna peryferie</a>, ul. Stalowa 3, Warszawa<br>
-							<span>oficynaperyferie@gmail.com</span>
+							<span>kontakt@oficynaperyferie.pl</span>
 						</h5>
 					</div>
 					<ul>

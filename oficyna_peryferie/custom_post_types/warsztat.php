@@ -23,7 +23,7 @@ function warsztat_init() {
 		'show_in_nav_menus' => true,
 		'supports'          => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
 		'has_archive'       => true,
-		'rewrite'           => array('slug' => 'dossier'),
+		'rewrite'           => array('slug' => 'warsztaty'),
 		'query_var'         => true,
 		'menu_icon'         => 'dashicons-hammer',
 		'show_in_rest'      => true,

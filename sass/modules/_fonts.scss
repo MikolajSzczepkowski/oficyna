@@ -13,6 +13,14 @@ h1, h2, h3, h4, h5, h6, strong {
 	font-family: $headingFont !important;
 }
 
+.cervo {
+    font-family: $headingFont !important;
+}
+
+.merlo {
+    font-family: $mainFontBold !important;
+}
+
 @font-face {
     font-family: 'cervo_neuebold_neue';
     src: url('/wp-content/themes/oficyna_peryferie/fonts/cervoneue-boldneue-webfont.woff2') format('woff2'),

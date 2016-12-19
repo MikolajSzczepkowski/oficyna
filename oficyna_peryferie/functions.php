@@ -28,5 +28,6 @@
 //oficyna
 
 	include 'custom_post_types/warsztat.php';
+	include 'custom_post_types/usluga.php';
 
 ?>
