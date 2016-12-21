@@ -9,7 +9,7 @@
 
 			<?php if ( willow_option( 'enable_social_share' ) ) : ?>
 				<div class="social-share">
-					<h3 class="separator-title"><span><?php _e( 'PODZIEL SIĘ', 'willow' ); ?></span></h3>
+					<h3 class="widget-title"><span><?php _e( 'PODZIEL SIĘ', 'willow' ); ?></span></h3>
 					<ul class="social-share-links js-social-share" data-sharrre="<?php echo WILLOW_ADMIN . 'script/sharrre.php'; ?>" data-thumbnail="<?php echo willow_get_share_thumbnail(); ?>">
 						<?php wp_enqueue_script( 'jquery-sharrre' );
 
@@ -51,7 +51,7 @@
 
 				if ( have_posts() ) : ?>
 					<div class="related-posts">
-						<h3 class="separator-title"><span><?php _e( 'INNE POWIĄZANE WPISY', 'willow' ); ?></span></h3>
+						<h3 class="widget-title"><span><?php _e( 'INNE POWIĄZANE WPISY', 'willow' ); ?></span></h3>
 						<ul class="related-posts-list row">
 							<?php while ( have_posts() ) : the_post(); ?>
 								<li <?php post_class( 'grid-post col-sm-4' ); ?>>
