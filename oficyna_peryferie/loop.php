@@ -50,7 +50,10 @@
 						'nextpagelink' => '<span class="next">' . __( 'Next Page &raquo;', 'willow' ) . '</span>',
 						'previouspagelink' => '<span class="prev">' . __( '&laquo; Previous Page', 'willow' ) . '</span>',
 					)); ?>
-
+				<div class="share-buttons">
+					<h4>PODZIEL SIĘ</h4>
+					<?php echo do_shortcode('[addtoany buttons="facebook,twitter,linkedin,pinterest"]'); ?>
+				</div>
 				<div class="post-tags tagcloud">
 					<?php the_tags( '', '', '' ); ?>
 				</div>

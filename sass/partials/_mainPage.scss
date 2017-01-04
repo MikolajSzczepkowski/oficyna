@@ -238,12 +238,12 @@
 		}
 		.vc_separator {
 			margin-top: 6px;
-			margin-bottom: 26px !important;
+			margin-bottom: 16px !important;
 			@include tablet {
-				margin-bottom: 48px!important;
+				margin-bottom: 33px!important;
 			}
 			@include netbook {
-				margin-bottom: 26px!important;
+				margin-bottom: 16px!important;
 			}
 		}
 	}

@@ -142,3 +142,68 @@
 		}
 	}
 }
+
+.share-buttons {
+	h4 {
+		display: inline-block;
+		font-size: 12px !important;
+		color: $grey !important;
+	}
+	>div {
+		display: inline-block;
+	}
+}
+
+.post-tags.tagcloud {
+	a {
+		font-size: 12px !important;
+	}
+}
+
+.related-post {
+	text-align: left !important;
+	.related-post-date {
+		position: relative;
+		margin-bottom: 15px;
+		font-size: 12px !important;
+		font-family: $headingFont !important;
+		text-transform: uppercase;
+		color: $blue;
+		hr {
+			display: inline-block;
+			vertical-align: middle;
+			width: 30%;
+			margin: 0 0 0 10px;
+			border-top: 1px solid $blue !important;
+			@include tablet {
+				margin: 9px 0 0 0;
+				float: right;
+			}
+			@include netbook {
+				display: none;
+			}
+			@include desktop {
+				display: inline-block;
+			}
+		}
+	}
+	.related-post-category {
+		text-transform: uppercase;
+		font-family: $headingFont !important;
+		font-size: 12px !important;
+		color: $grey;
+		a {
+			margin-left: 5px;
+			@include tablet {
+				margin-left: 0;
+				float: right;
+			}
+		}
+	}
+	.related-post-excerpt + p {
+		color: $blue !important;
+	}
+	.related-post-read-more {
+		text-decoration: underline !important;
+	}
+}
