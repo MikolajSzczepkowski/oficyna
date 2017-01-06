@@ -1,4 +1,20 @@
+.aside-section {
+	border-left: 0 !important;
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+	@include netbook {
+		padding-left: 39px !important;
+		width: 290px !important;
+	}
+	@include desktop {
+		width: 308px !important;
+	}
+}
+
 .blog-loop {
+	article {
+		padding: 15px !important;
+	}
 	h2 {
 		font-family: $mainFontBold !important;
 		font-weight: 400 !important;
@@ -143,6 +159,10 @@
 	}
 }
 
+.post-thumbnail {
+	margin: 0 !important;
+}
+
 .share-buttons {
 	h4 {
 		display: inline-block;
@@ -156,6 +176,8 @@
 
 .post-tags.tagcloud {
 	a {
+		padding-left: 0 !important;
+		padding-right: 20px !important;
 		font-size: 12px !important;
 	}
 }
@@ -205,5 +227,27 @@
 	}
 	.related-post-read-more {
 		text-decoration: underline !important;
+	}
+}
+
+.related-posts {
+	padding: 0 15px;
+}
+
+.blog-post {
+	.blog-post-text {
+		padding: 0 !important;
+	}
+	.post-info {
+		margin: 50px 0 0 0;
+	}
+	.post-title {
+		text-align: left !important;
+	}
+	.blog-post-read-more {
+		text-decoration: underline !important;
+	}
+	.post-tags {
+		margin-top: 30px;
 	}
 }

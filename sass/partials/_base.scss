@@ -8,6 +8,14 @@ a {
 	}
 }
 
+a, button, input, select {
+	position: relative;
+	z-index: 2;
+}
+//hero section
+.hero-section {
+	z-index: 2;
+}
 // icon border
 .separator {
 	> div {
@@ -16,6 +24,7 @@ a {
 	.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-size-xs.vc_icon_element-have-style-inner {
 		width: 1.2em !important;
 		height: 1.2em !important;
+		margin-left: 5px;
 	}
 	.vc_icon_element {
 		.vc_icon_element-inner {
@@ -24,6 +33,11 @@ a {
 				font-size: 1em!important;
 			}
 		}
+	}
+}
+.vc_tta-panel-body {
+	.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-size-xs.vc_icon_element-have-style-inner {
+		margin-left: 0;
 	}
 }
 .separator-white {
@@ -40,7 +54,6 @@ a {
 		}
 	}
 }
-
 // heading
 h2, .wpb_willow_big_title {
 	font-size: 2em!important;
@@ -270,5 +283,19 @@ h2, .wpb_willow_big_title {
 		&:hover {
 			color: $black;
 		}
+	}
+}
+
+.lines-container {
+	position: fixed !important;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	.lines {
+		height: 100vh;
+		border-left: 1px solid transparentize($grey, 0.8);
+		border-right: 1px solid transparentize($grey, 0.8);
 	}
 }

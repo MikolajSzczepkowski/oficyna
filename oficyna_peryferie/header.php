@@ -271,8 +271,6 @@
 
 					<div class="collapse navbar-collapse header-navigation" id="header-navigation">
 
-						<div class="header-separator pull-left visible-md visible-lg"></div>
-
 						<?php wp_nav_menu( array(
 							'theme_location'    => 'header-navigation',
 							'depth'             => 0,
@@ -295,8 +293,6 @@
 									</li>
 								<?php endforeach; ?>
 							</ul>
-
-							<div class="header-separator pull-right visible-md visible-lg"></div>
 
 							<?php if ( willow_option( 'enable_wpml_language_switcher' ) ) : ?>
 
@@ -322,6 +318,25 @@
 			</header>
 
 			<div class="header-floating-anchor"></div>
+			<!-- background lines -->
+			<div class="container lines-container">
+				<div class="col-sm-3 ">
+					<div class="lines">
+					</div>
+				</div>
+				<div class="col-sm-3 hidden-xs ">
+					<div class="lines">
+					</div>
+				</div>
+				<div class="col-sm-3 hidden-xs">
+					<div class="lines">
+					</div>
+				</div>
+				<div class="col-sm-3 hidden-xs">
+					<div class="lines">
+					</div>
+				</div>
+			</div>
 
 			<?php
 			$pages_with_title_section = willow_option( 'pages_with_title_section', array() );
@@ -363,7 +378,6 @@
 				<?php if ( ! empty( $title_section_background_image ) ) : ?>
 					<div class="section-background <?php echo ( ! empty( $background_overlay ) ) ? $background_overlay : ''; ?> <?php echo $enable_parallax ? 'parallax-background js-parallax' : ''; ?>" style="background-image: url(<?php echo $title_section_background_image; ?>); <?php echo willow_build_background_repeat_style( $background_repeat ); ?>;" data-parallax="background"></div>
 				<?php endif; ?>
-
 				<div class="container">
 					<h1 class="wpb_willow_big_title wpb_content_element text-center">
 						<div class="wpb_wrapper">
