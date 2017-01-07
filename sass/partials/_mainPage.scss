@@ -184,6 +184,9 @@
 	}
 	.vc_gitem-row-position-middle {
 		top: 30% !important;
+		>div {
+			padding-left: 0 !important;
+		}
 		h3 {
 			@include tablet {
 				font-size: 22px !important;
@@ -193,9 +196,15 @@
 			}
 		}
 	}
+	.vc_gitem-row-position-bottom {
+		>div {
+			padding-left: 0 !important;
+		}
+	}
 	.latest-post-header {
 		width: 50%;
 		float: left;
+		padding-left: 0 !important;
 		@include tablet {
 			width: 66%;
 		}
@@ -301,6 +310,9 @@
 			}
 			&::after {
 				min-width: 110px;
+				@include desktop {
+					min-width: 230px;
+				}
 			}
 		}
 	}
