@@ -63,9 +63,8 @@
 	}
 }
 .hit-module {
-	@include netbook {
-		background-size: 75% !important;
-	}
+	min-height: 430px;
+	background-size: contain !important;
 	.vc_gitem-row-position-top {
 		@include netbook {
 			top: 30% !important;
@@ -312,6 +311,37 @@
 				min-width: 110px;
 				@include desktop {
 					min-width: 230px;
+				}
+			}
+		}
+	}
+}
+
+.vc_tta-panels-container {
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+			&:nth-of-type(1) {
+				margin-left: -15px;
+    			margin-right: 15px;
+			}
+			&:nth-of-type(4) {
+				padding-left: 30px;
+				padding-right: 0;
+			}
+			span {
+				display: block;
+				width: 8px;
+				height: 8px;
+				margin: auto;
+				border-radius: 50%;
+				border: 2px solid $blue;
+				cursor: pointer;
+				transition: background-color .7s;
+				&:hover {
+					background-color: $blue;
 				}
 			}
 		}

@@ -22,7 +22,6 @@
             jQuery('.js-anchor-link').on('click', function(event) {
                 event.preventDefault();
                 var pageHeight = window.innerHeight;
-                console.log(pageHeight);
                 jQuery("html, body").animate({scrollTop: pageHeight}, 1000);
                 return false;
             });
@@ -95,6 +94,38 @@
             }
         }
 
+        function rotatePanel() {
+            var rotator = jQuery(".rotator");
+            var panelsContainer = rotator.find(".vc_tta-panels");
+            panelsContainer.map(function() {
+                var ul = jQuery("<ul>");
+                var panels = jQuery(this).find(".vc_tta-panel");
+                panels.map(function(){
+                    var li = jQuery("<li class='col-xs-3'>");
+                    var span = jQuery("<span>");
+                    li.append(span);
+                    ul.append(li);
+                });
+                jQuery(this).parent().append(ul);
+            });
+            var rotateInterval = setInterval(function() {
+                panelsContainer.map( function() {
+                    var active = jQuery(this).find( jQuery(".vc_active"));
+                    var nextPanel = active.next();
+                    active.fadeOut();
+                    active.removeClass("vc_active");
+                    if (nextPanel.length == 0) {
+                        jQuery(this).children().first().addClass("vc_active");
+                        jQuery(this).children().first().fadeIn();
+                    }
+                    else {
+                        nextPanel.addClass("vc_active");
+                        nextPanel.fadeIn();
+                    }
+                });
+            }, 3000);
+        }
+
         function checkWindowSize() {
             jQuery(window).on("resize", menuController);
         }
@@ -105,6 +136,7 @@
            menuDecor();
            offerModuleController();
            menuController();
+           rotatePanel();
            checkWindowSize();
         }
 
