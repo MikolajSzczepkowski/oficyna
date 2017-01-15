@@ -48,6 +48,9 @@
 	top: 0 !important;
 }
 .nav {
+	display: flex;
+	justify-content: space-between;
+	float: none !important;
 	li {
 		transition: color 1s;
 		a {

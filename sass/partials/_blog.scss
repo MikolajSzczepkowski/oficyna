@@ -198,6 +198,15 @@
 	}
 }
 
+.post-content {
+	blockquote {
+		padding: 0;
+		border: 0;
+		background-color: transparent;
+		color: $blue;
+	}
+}
+
 .share-buttons {
 	h4 {
 		display: inline-block;
