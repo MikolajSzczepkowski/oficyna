@@ -41,7 +41,11 @@
 										<?php $categories = get_the_category();
 											echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>'; ?>
 									</p>
-									<h3 class="related-post-title"><?php the_title(); ?></h3>
+									<h3 class="related-post-title">
+										<a href="<?php the_permalink(); ?>">
+											<?php the_title(); ?>
+										</a>
+									</h3>
 									<p class="related-post-excerpt">
 										<?php the_excerpt(); ?>
 									</p>
