@@ -30,4 +30,24 @@
 	include 'custom_post_types/warsztat.php';
 	include 'custom_post_types/usluga.php';
 
+	add_action( 'woocommerce_before_shop_loop_item_title', 'oficyna_add_product_cat', 25);
+	function oficyna_add_product_cat()
+	{
+	    global $product;
+	    $product_cats = wp_get_post_terms($product->id, 'product_cat');
+	    $count = count($product_cats);
+	    foreach($product_cats as $key => $cat)
+	    {
+	        echo '<span class="shop-category">'.$cat->name.'</span>';
+	        if($key < ($count-1))
+	        {
+	            echo ' ';
+	        }
+	        else
+	        {
+	            echo ' ';
+	        }
+	    }
+	}
+
 ?>
