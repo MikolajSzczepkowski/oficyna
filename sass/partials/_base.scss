@@ -132,6 +132,19 @@ h2, .wpb_willow_big_title {
 	}
 }
 
+.simple-button {
+	a {
+		padding: 0 !important;
+		text-decoration: underline !important;
+		color: $blue !important;
+		background-color: transparent!important;
+		background-image: none !important;
+		&:hover {
+			color: $black !important;
+		}
+	}
+}
+
 .vc_general.vc_pagination.vc_pagination-style-outline.vc_pagination-shape-round.vc_pagination-color-blue {
 	a {
 		border-color: $blue !important;

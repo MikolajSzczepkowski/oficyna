@@ -44,30 +44,50 @@ get_header( 'shop' ); ?>
 		?>
 
 		<div class="col-md-9 col-md-push-3 shop-main">
-			<?php echo do_shortcode('[product_category category="ksiazki"]'); ?>
 
-			<?php if ( have_posts() ) : ?>
+			<?php if ( is_shop() ) :?>
 
-				<?php woocommerce_product_loop_start(); ?>
-				<?php while ( have_posts() ) : the_post(); ?>
-					<?php wc_get_template_part( 'content', 'product' ); ?>
+				<h3 class="widget-title">
+					<span>Książki</span>
+				</h3>
+				<?php echo do_shortcode('[product_category category="ksiazki"]'); ?>
 
-				<?php endwhile; // end of the loop. ?>
+				<h3 class="widget-title">
+					<span>Nowości</span>
+				</h3>
+				<?php echo do_shortcode('[product_category category="nowosci"]'); ?>
 
-				<?php woocommerce_product_loop_end(); ?>
+			<?php else: ?>
+				
+				<h3 class="widget-title">
+					<span><?php single_cat_title(); ?></span>
+				</h3>
 
-				<?php
-				/**
-				* woocommerce_after_shop_loop hook.
-				*
-				* @hooked woocommerce_pagination - 10
-				*/
-				do_action( 'woocommerce_after_shop_loop' );
-				?>
+				<?php if ( have_posts() ) : ?>
 
-			<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
+					<?php woocommerce_product_loop_start(); ?>
+					<?php while ( have_posts() ) : the_post(); ?>
+						<?php  the_category(); ?>
+						<?php wc_get_template_part( 'content', 'product' ); ?>
 
-				<?php wc_get_template( 'loop/no-products-found.php' ); ?>
+					<?php endwhile; // end of the loop. ?>
+
+					<?php woocommerce_product_loop_end(); ?>
+
+					<?php
+					/**
+					* woocommerce_after_shop_loop hook.
+					*
+					* @hooked woocommerce_pagination - 10
+					*/
+					do_action( 'woocommerce_after_shop_loop' );
+					?>
+
+				<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
+
+					<?php wc_get_template( 'loop/no-products-found.php' ); ?>
+
+				<?php endif; ?>
 
 			<?php endif; ?>
 

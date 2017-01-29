@@ -1,5 +1,27 @@
+.shop-menu {
+	background-color: $blue !important;
+	.nav {
+		li {
+			a {
+				color: $white !important;
+				&:hover {
+					color: $rose !important;
+				}
+			}
+		}
+	}
+}
 .shop-container {
 	z-index: 2;
+}
+.shop-main {
+	.widget-title {
+		margin: 2em 0;
+		text-transform: uppercase !important;
+		&:before {
+			top: 0 !important;
+		}
+	}
 }
 .woocommerce-breadcrumb {
 	padding: 0 15px !important;
@@ -19,6 +41,8 @@
 	}
 }
 .products {
+	display: flex !important;
+	flex-wrap: wrap !important;
 	li {
 		&:hover {
 			.add_to_cart_button {
@@ -33,9 +57,12 @@
 			margin: auto;
 		}
 		.shop-category {
-			display: block;
+			display: none !important;
 			margin-top: 30px;
 			font-size: 12px !important;
+			&:first-of-type {
+				display: block !important;
+			}
 		}
 		h3 {
 			margin-top: 5px !important;
@@ -45,48 +72,77 @@
 			font-size: 12px !important;
 			color: $grey !important;
 		}
-	}
-}
-.add_to_cart_button {
-	display: none !important;
-	justify-content: center;
-	align-items: center;
-	position: absolute !important;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0 !important;
-	background-color: transparentize($white, .7) !important;
-	&:after {
-		position: relative;
-		margin-left: 0 !important;
-		left: -30px;
-		color: $blue !important;
-	}
-	span {
-		position: relative;
-		display: block;
-		min-width: 220px;
-		height: 50px;
-		padding: 1em;
-		border: 1px solid $blue !important;
-		background-image: none !important;
-		background-color: $white;
-		text-align: center;
-		text-decoration: underline;
-		line-height: 1.3;
-		text-transform: uppercase;
-		color: $blue !important;
-		&::after {
-			content: '';
-			position: absolute;
-			z-index: -1;
-			top: -5px;
-			right: -5px;
+		a:first-of-type {
+			&:hover {
+				img {
+					opacity: .7;
+					transition: opacity .3s;
+				}
+				h3, p {
+					transition: color .3s;
+					color: $black !important;
+				}
+			}
+			h3, p {
+				transition: color .3s;
+			}
+			img {
+				transition: opacity .3s;
+			}
+		}
+		.add_to_cart_button {
+			display: none !important;
+			justify-content: center;
+			align-items: center;
+			position: absolute !important;
 			min-width: 220px;
 			height: 50px;
-			background-color: $white;
-			border: 1px solid $blue;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0 !important;
+			margin: auto !important;
+			background-color: transparent !important;
+			&:after {
+				position: relative;
+				margin-left: 0 !important;
+				left: -22px;
+				color: $blue !important;
+			}
+			span {
+				position: relative;
+				padding: 1em 2em;
+				border: 1px solid $blue !important;
+				background-image: none !important;
+				background-color: $white;
+				text-align: center;
+				text-decoration: underline;
+				line-height: 1.3;
+				text-transform: uppercase;
+				color: $blue !important;
+				transition: all .3s;
+				&::after {
+					content: '';
+					position: absolute;
+					z-index: -1;
+					top: -5px;
+					right: -5px;
+					width: 100%;
+					height: 50px;
+					background-color: $white;
+					border: 1px solid $blue;
+					transition: all .3s;
+				}
+				&:hover {
+					background-color: $rose !important;
+					color: $white !important;
+					transition: all .3s;
+					&::after {
+						background-color: $blue !important;
+						transition: all .3s;
+					}
+				}
+			}
 		}
 	}
 }
