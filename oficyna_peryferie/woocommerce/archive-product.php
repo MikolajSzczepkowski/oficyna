@@ -22,6 +22,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( 'shop' ); ?>
 	<div class="shop-header">
+		<div class="logo-container">
+			<img src="<?php echo willow_option( 'preloader_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>" >
+		</div>
 		<?php
 		/**
 		* woocommerce_archive_description hook.
@@ -58,7 +61,7 @@ get_header( 'shop' ); ?>
 				<?php echo do_shortcode('[product_category category="nowosci"]'); ?>
 
 			<?php else: ?>
-				
+
 				<h3 class="widget-title">
 					<span><?php single_cat_title(); ?></span>
 				</h3>

@@ -259,13 +259,6 @@
 							<span class="menu-mobile-text">menu</span>
 							<span class="glyphicon glyphicon-chevron-down"></span>
 						</button>
-						<a class="navbar-brand site-logo" href="<?php echo home_url(); ?>">
-							<?php if ( willow_option( 'header_logo' ) ) : ?>
-								<img src="<?php echo willow_option( 'header_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>" />
-							<?php else : ?>
-								<span><?php bloginfo( 'name' ); ?></span>
-							<?php endif ?>
-						</a>
 					</div>
 
 
