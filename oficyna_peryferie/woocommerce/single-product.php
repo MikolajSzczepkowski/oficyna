@@ -21,39 +21,68 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
+<div class="shop-container container">
+	<div class="col-md-9 col-md-push-3 shop-main">
+		<?php
+			/**
+			 * woocommerce_before_main_content hook.
+			 *
+			 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+			 * @hooked woocommerce_breadcrumb - 20
+			 */
+			do_action( 'woocommerce_before_main_content' );
+		?>
 
-	<?php
-		/**
-		 * woocommerce_before_main_content hook.
-		 *
-		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-		 * @hooked woocommerce_breadcrumb - 20
-		 */
-		do_action( 'woocommerce_before_main_content' );
-	?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+				<?php wc_get_template_part( 'content', 'single-product' ); ?>
 
-			<?php wc_get_template_part( 'content', 'single-product' ); ?>
+			<?php endwhile; // end of the loop. ?>
 
-		<?php endwhile; // end of the loop. ?>
+		<?php
+			/**
+			 * woocommerce_after_main_content hook.
+			 *
+			 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+			 */
+			do_action( 'woocommerce_after_main_content' );
+		?>
+	</div>
+	<div class="col-md-3 col-md-pull-9 shop-sidebar">
+		<ul class="sidebar-categories">
 
-	<?php
-		/**
-		 * woocommerce_after_main_content hook.
-		 *
-		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-		 */
-		do_action( 'woocommerce_after_main_content' );
-	?>
+		<?php
+			$args = array(
+				'number'     => $number,
+				'orderby'    => 'ID',
+				'order'      => 'ASC',
+				'hide_empty' => true,
+				'include'    => $ids,
+				'parent'     => 0,
+			);
+			$child_args = array(
+				'number'     => $number,
+				'orderby'    => 'ID',
+				'order'      => 'ASC',
+				'hide_empty' => true,
+				'include'    => $ids,
+			);
+			$product_categories = get_terms( 'product_cat', $args );
+			$product_categories_children = get_terms( 'product_cat', $child_args );
+			foreach( $product_categories as $cat ) {
+				echo '<li>';
+				echo '<a href="' . get_term_link( $cat ) . '">' . $cat->name . '</a>';
 
-	<?php
-		/**
-		 * woocommerce_sidebar hook.
-		 *
-		 * @hooked woocommerce_get_sidebar - 10
-		 */
-		do_action( 'woocommerce_sidebar' );
-	?>
+				foreach( $product_categories_children as $category ) {
+					if( $cat->term_id == $category->parent ) {
+						echo '<li class="subcategory"><a href="' . get_term_link( $category ) . '">' . $category->name . '</a></li>';
+					}
+				}
 
+				echo '</li>';
+			}
+		?>
+		</ul>
+	</div>
+</div>
 <?php get_footer( 'shop' ); ?>

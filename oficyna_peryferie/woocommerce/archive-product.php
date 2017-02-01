@@ -22,9 +22,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( 'shop' ); ?>
 	<div class="shop-header">
-		<div class="logo-container">
-			<img src="<?php echo willow_option( 'preloader_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>" >
-		</div>
+		<?php if ( is_shop() ) :?>
+			<div class="logo-container">
+				<img src="<?php echo willow_option( 'preloader_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>" >
+			</div>
+		<?php endif; ?>
 		<?php
 		/**
 		* woocommerce_archive_description hook.
@@ -51,14 +53,14 @@ get_header( 'shop' ); ?>
 			<?php if ( is_shop() ) :?>
 
 				<h3 class="widget-title">
-					<span>Książki</span>
-				</h3>
-				<?php echo do_shortcode('[product_category category="ksiazki"]'); ?>
-
-				<h3 class="widget-title">
 					<span>Nowości</span>
 				</h3>
 				<?php echo do_shortcode('[product_category category="nowosci"]'); ?>
+
+				<h3 class="widget-title">
+					<span>Bestsellery</span>
+				</h3>
+				<?php echo do_shortcode('[product_category category="bestsellery"]'); ?>
 
 			<?php else: ?>
 
