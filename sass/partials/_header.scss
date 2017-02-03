@@ -48,9 +48,12 @@
 	top: 0 !important;
 }
 .nav {
-	display: flex;
+	display: block;
 	justify-content: space-between;
 	float: none !important;
+	@include netbook {
+		display: flex;	
+	}
 	li {
 		transition: color 1s;
 		a {

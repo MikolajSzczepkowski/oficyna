@@ -17,7 +17,7 @@
 		<section id="content" class="content-section section">
 			<div class="container container-table">
 
-				<div class="col-md-9 col-md-push-3" role="main">
+				<div class="col-md-9 col-md-push-3 shop-page" role="main">
 
 					<div class="page-loop">
 
