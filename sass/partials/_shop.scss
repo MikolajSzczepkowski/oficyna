@@ -217,7 +217,8 @@
 .shop-page .woocommerce-Button.button,
 .single_add_to_cart_button,
 .checkout-button,
-.shop-page input[type="submit"] {
+.shop-page input[type="submit"],
+#yith-searchsubmit {
 	background-color: $blue !important;
 	transition: all .3s;
 	color: $white !important;
@@ -325,5 +326,55 @@
 				padding-left: 5px;
 			}
 		}
+	}
+}
+
+.search {
+	position: absolute;
+	z-index: 5;
+	overflow: hidden;
+	top: 30px;
+	right: 30px;
+	width: 50px;
+	height: 50px;
+	border: 2px solid $blue;
+	border-radius: 50%;
+	&:hover {
+		top: 10px;
+		width: auto;
+		height: auto;
+		border: none;
+		border-radius: 0;
+		.yith-ajaxsearchform-container {
+			top: -50px;
+			right: -50px;
+			transition: right .7s;
+		}
+		i {
+			display: none;
+		}
+	}
+	i {
+		margin-top: 15px;
+		margin-left: 15px;
+		font-size: 15px;
+		color: $blue;
+	}
+	.yith-ajaxsearchform-container {
+		position: relative;
+		right: -115px;
+		padding: 100px 50px;
+		transition: right .7s;
+	}
+	@include tablet {
+		top: 50px;
+	}
+	#yith-s {
+		@include desktop {
+			width: 179px;
+		}
+	}
+	#yith-searchsubmit {
+		top: -2px;
 	}
 }

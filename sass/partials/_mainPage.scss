@@ -270,11 +270,21 @@
 		}
 	}
 }
-
+.vc_grid-item-mini.vc_custom_1420541757398 {
+	background-color: transparent !important;
+}
 .selected-product {
-	background-color: $white;
-	.vc_single_image-wrapper {
-		width: 175px;
+	background-color: transparent !important;
+	.vc_gitem-col {
+		padding: 0 !important;
+	}
+	figure {
+		display: block !important;
+		.vc_single_image-wrapper {
+			display: block !important;
+			width: 175px;
+			margin: auto;
+		}
 	}
 	.vc_gitem-row-position-bottom {
 		h3 {

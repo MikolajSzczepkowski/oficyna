@@ -332,6 +332,12 @@
 				</div>
 			</div>
 
+			<div class="container">
+				<div class="search">
+					<i class="fa fa-search" aria-hidden="true"></i>
+					<?php  echo do_shortcode('[yith_woocommerce_ajax_search]'); ?>
+				</div>
+			</div>
 			<?php
 			$pages_with_title_section = willow_option( 'pages_with_title_section', array() );
 			$native_types = array( 'blog_index', 'blog_archive', 'portfolio_index', 'portfolio_single', 'search' );

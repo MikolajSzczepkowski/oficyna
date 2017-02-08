@@ -56,4 +56,7 @@
 	    return 'http://oficynaperyferie.pl/sklep/';
 	}
 
+	// remove wp version number in head
+	remove_action('wp_head', 'wp_generator');
+
 ?>

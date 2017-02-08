@@ -22,6 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( 'shop' ); ?>
 	<div class="shop-header">
+
 		<?php if ( is_shop() ) :?>
 			<div class="logo-container">
 				<img src="<?php echo willow_option( 'preloader_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>" >
