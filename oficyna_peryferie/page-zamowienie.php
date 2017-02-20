@@ -15,7 +15,7 @@
 	<?php else : ?>
 
 		<section id="content" class="content-section section">
-			<div class="container container-table">
+			<div class="container container-table shop-container">
 
 				<div class="col-md-9 col-md-push-3 shop-page" role="main">
 
@@ -74,4 +74,4 @@
 
 <?php endwhile; endif; ?>
 
-<?php get_footer(); ?>
+<?php get_footer( 'shop' ); ?>

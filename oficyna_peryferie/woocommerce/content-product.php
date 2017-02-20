@@ -52,7 +52,10 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 do_action( 'woocommerce_shop_loop_item_title' );
 	 ?>
 
-	 <p class="product-autor"><?php the_field("autor"); ?></p>
+	 <p class="product-autor"><?php
+	 $autor = array_shift( wc_get_product_terms( $product->id, 'pa_autor', array( 'fields' => 'names' ) ) );
+	 echo $autor;
+	?></p>
 
 	 <?php
 	/**

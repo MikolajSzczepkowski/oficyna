@@ -4,17 +4,7 @@
 
 <?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
-	<?php if ( $is_using_vc === 'true' ) : ?>
-
-		<div id="content" <?php post_class( 'visual-composer-page' ); ?>>
-
-			<?php the_content(); ?>
-
-		</div>
-
-	<?php else : ?>
-
-		<section id="content" class="content-section section">
+		<section id="content" class="content-section section" <?php post_class( 'visual-composer-page' ); ?>>
 			<div class="container container-table shop-container">
 
 				<div class="col-md-9 col-md-push-3 shop-page" role="main">
@@ -69,9 +59,7 @@
 
 			</div>
 		</section>
-
-	<?php endif; ?>
-
+		
 <?php endwhile; endif; ?>
 
 <?php get_footer( 'shop' ); ?>
