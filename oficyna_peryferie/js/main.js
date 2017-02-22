@@ -150,6 +150,12 @@
             jQuery(window).on("resize", menuController);
         }
 
+        function runTypographer() {
+            jQuery('#document').typographer({
+                modules: ['orphan', 'punctuation'] // wywoływane moduły
+            });
+        }
+
         function init() {
            slideUp();
            slideDown();
@@ -158,6 +164,7 @@
            menuController();
            rotatePanel();
            checkWindowSize();
+           runTypographer();
         }
 
         return {

@@ -20,7 +20,11 @@
 
 	function oficyna_enqueue_scripts() {
 		wp_register_script('oficyna_js', get_stylesheet_directory_uri() . '/js/main.js', array('jquery'), NULL, 'screen');
+		wp_register_script('oficyna_typographer', get_stylesheet_directory_uri() . '/js/jquery.typographer.min.pack.js', array('jquery'), NULL, 'screen');
+		wp_register_script('oficyna_typographer_hyph', get_stylesheet_directory_uri() . '/js/hyph-pl.min.js', array('jquery'), NULL, 'screen');
 
+		wp_enqueue_script('oficyna_typographer');
+		wp_enqueue_script('oficyna_typographer_hyph');
 		wp_enqueue_script('oficyna_js');
 	}
 	add_action('wp_enqueue_scripts', 'oficyna_enqueue_scripts',999);
