@@ -96,7 +96,11 @@
 .products {
 	display: flex !important;
 	flex-wrap: wrap !important;
+	@media (max-width: 770px) {
+		justify-content: center;
+    }
 	li {
+		margin-bottom: 30px;
 		&:hover {
 			.add_to_cart_button {
 				display: flex !important;
@@ -404,6 +408,29 @@
 		li {
 			margin: 0 0 15px 0;
 			list-style: none;
+		}
+	}
+}
+
+// customize vc in shop page
+.shop-page {
+	.vc-section {
+		background-color: transparent !important;
+		.container {
+			padding: 0 !important;
+			.vc_column-inner {
+				padding: 0 !important;
+			}
+		}
+		.products {
+			li {
+				@include netbook {
+					padding: 0 !important;
+					img {
+						padding: 0 15px;
+					}
+				}
+			}
 		}
 	}
 }
