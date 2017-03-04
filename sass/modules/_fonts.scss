@@ -1,15 +1,18 @@
-$mainFontRegular: 'merlomedium', sans-serif;
-$mainFontItalic: 'merlomedium_italic', sans-serif;
-$mainFontBold: 'merlobold', sans-serif;
-$headingFont: 'cervo_neuebold_neue', sans-serif;
+$mainFontRegular: 'merlo_regularregular', sans-serif;
+$mainFontItalic: 'merloregular_italic', sans-serif;
+$mainFontBold: 'merlomedium', sans-serif;
+$headingFont: 'cervo_neuesemibold_neue', sans-serif;
+$standardKerning: 2px;
+$smallKerning: 1px;
 
 html, p {
     font-family: $mainFontBold !important;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust:     100%;
+    letter-spacing: 1px;
 }
 
-h1, h2, h3, h4, h5, h6, strong, a {
+h1, h2, h3, h4, h5, h6, strong, a, [type=submit] {
 	font-family: $headingFont !important;
 }
 
@@ -22,9 +25,9 @@ h1, h2, h3, h4, h5, h6, strong, a {
 }
 
 @font-face {
-    font-family: 'cervo_neuebold_neue';
-    src: url('/wp-content/themes/oficyna_peryferie/fonts/cervoneue-boldneue-webfont.woff2') format('woff2'),
-         url('/wp-content/themes/oficyna_peryferie/fonts/cervoneue-boldneue-webfont.woff') format('woff');
+    font-family: 'cervo_neuesemibold_neue';
+    src: url('/wp-content/themes/oficyna_peryferie/fonts/cervoneue-semiboldneue-webfont.woff2') format('woff2'),
+         url('/wp-content/themes/oficyna_peryferie/fonts/cervoneue-semiboldneue-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -49,14 +52,22 @@ h1, h2, h3, h4, h5, h6, strong, a {
 }
 
 @font-face {
-    font-family: 'merlobold';
-    src: url('/wp-content/themes/oficyna_peryferie/fonts/merlo-bold-webfont.woff2') format('woff2'),
-         url('/wp-content/themes/oficyna_peryferie/fonts/merlo-bold-webfont.woff') format('woff');
+    font-family: 'merlo_regularregular';
+    src: url('merlo-regular-webfont.woff2') format('woff2'),
+         url('merlo-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
+@font-face {
+    font-family: 'merloregular_italic';
+    src: url('merlo-regularitalic-webfont.woff2') format('woff2'),
+         url('merlo-regularitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 p, h4 {
     font-size: 1.4em !important;
     line-height: 1.3 !important;

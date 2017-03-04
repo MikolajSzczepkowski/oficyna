@@ -52,7 +52,7 @@
 	justify-content: space-between;
 	float: none !important;
 	@include netbook {
-		display: flex;	
+		display: flex;
 	}
 	li {
 		transition: color 1s;
@@ -76,7 +76,10 @@
 	@include netbook {
 		top: 100px;
 		width: 100vw;
-		background-color: transparentize($white, .2) !important;
+		padding-bottom: 50px !important;
+		background-color: $white !important;
+		border: 0 !important;
+		box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.09 ) !important;
 		a {
 			display: inline !important;
 			padding: 5px 15px !important;

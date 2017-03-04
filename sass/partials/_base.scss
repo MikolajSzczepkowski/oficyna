@@ -18,6 +18,9 @@ a, button, input, select {
 }
 // icon border
 .separator {
+	* {
+		letter-spacing: $standardKerning;
+	}
 	> div {
 		margin-bottom: 0 !important;
 	}
@@ -25,6 +28,9 @@ a, button, input, select {
 		width: 1.2em !important;
 		height: 1.2em !important;
 		margin-left: 5px;
+		span {
+			left: 55% !important;
+		}
 	}
 	.vc_icon_element {
 		.vc_icon_element-inner {
@@ -94,16 +100,20 @@ h2, .wpb_willow_big_title {
 		position: relative;
 		min-width: 260px;
 		height: 50px;
+		padding: 20px 10px 20px 0 !important;
 		border: 1px solid $blue !important;
 		background-image: none !important;
-		background-color: $white;
+		background-color: $lightGrey !important;
 		transition: all .2s ease-in-out;
+		font-family: $headingFont !important;
+		letter-spacing: $standardKerning;
+		text-transform: uppercase;
 		&::after {
 			content: '';
 			position: absolute;
 			z-index: -1;
-			top: -5px;
-			right: -5px;
+			top: 5px;
+			right: 5px;
 			min-width: 260px;
 			height: 50px;
 			background-color: $white;
@@ -111,11 +121,11 @@ h2, .wpb_willow_big_title {
 		}
 		&:hover {
 			color: $white !important;
-			background-color: $blue !important;
+			background-color: $rose !important;
 			background-image: none !important;
 			text-decoration: underline !important;
 			&::after {
-				background: $rose;
+				background: $blue;
 			}
 		}
 	}
@@ -123,10 +133,22 @@ h2, .wpb_willow_big_title {
 
 .oficyna-button.negative {
 	> * {
+		padding: 0 !important;
+		background-color: $white !important;
+		[type=submit] {
+			letter-spacing: $standardKerning;
+		}
+		&::after {
+			top: -5px;
+			right: -5px;
+			background-color: $lightGrey !important;
+		}
 		&:hover {
 			border: 1px solid $rose !important;
+			background-color: $blue !important;
 			&::after {
-				border: 1px solid $rose !important;
+				border: 1px solid $blue !important;
+				background-color: $rose !important;
 			}
 		}
 	}
@@ -163,12 +185,17 @@ h2, .wpb_willow_big_title {
 		width: 75%;
 		margin: auto;
 	}
-	h3, h5, p {
+	h3 {
+		font-family: $mainFontBold !important;
+		font-weight: 400 !important;
+	}
+	h3, p {
 		text-align: center;
 		color: $white !important;
 	}
 	p {
 		padding-bottom: 50px;
+		color: transparentize($white, .7) !important;
 		@include tablet {
 			display: block;
 			width: 60%;
@@ -177,7 +204,10 @@ h2, .wpb_willow_big_title {
 	}
 	h5 {
 		padding-top: 50px;
-		font-size: 12px;
+		font-size: 13px;
+		letter-spacing: $smallKerning;
+		text-align: center;
+		color: transparentize($white, .7) !important;
 	}
 }
 
@@ -208,6 +238,9 @@ h2, .wpb_willow_big_title {
 				background-color: darken($blue, 10%);
 				&:nth-of-type(1) {
 					padding-left: 15px;
+					font-size: 14px !important;
+					font-family: $mainFontBold !important;
+					letter-spacing: $smallKerning;
 				}
 			}
 			[type="submit"] {
@@ -233,6 +266,8 @@ h2, .wpb_willow_big_title {
 	color: $blue;
 	text-decoration: underline;
 	transition: color 1s;
+	font-family: $headingFont !important;
+	letter-spacing: $standardKerning;
 	&:hover {
 		color: $black;
 	}

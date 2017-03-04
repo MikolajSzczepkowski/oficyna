@@ -186,16 +186,16 @@
 					right: -5px;
 					width: 100%;
 					height: 50px;
-					background-color: $white;
+					background-color: $lightGrey;
 					border: 1px solid $blue;
 					transition: all .3s;
 				}
 				&:hover {
-					background-color: $rose !important;
+					background-color: $blue !important;
 					color: $white !important;
 					transition: all .3s;
 					&::after {
-						background-color: $blue !important;
+						background-color: $rose !important;
 						transition: all .3s;
 					}
 				}

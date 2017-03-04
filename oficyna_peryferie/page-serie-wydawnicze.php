@@ -13,6 +13,20 @@
 
 						<article id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<?php the_content(); ?>
+							<ul class="shop-map-list">
+								<?php
+
+								$sets = get_terms( 'pa_seria', array(
+								    'orderby'    => 'ASC',
+								    'hide_empty' => 0
+								) );
+								foreach( $sets as $set ) {
+									$set_link = get_term_link( $set->slug, 'pa_seria' );
+									echo '<li><a href="' . $set_link . '">' . $set->name . '</a></li>';
+								}
+
+	 							?>
+							</ul>
 						</article>
 
 					</div>
@@ -59,7 +73,7 @@
 
 			</div>
 		</section>
-		
+
 <?php endwhile; endif; ?>
 
 <?php get_footer( 'shop' ); ?>

@@ -13,6 +13,20 @@
 
 						<article id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<?php the_content(); ?>
+							<ul class="shop-map-list">
+								<?php
+
+								$authors = get_terms( 'pa_autor', array(
+								    'orderby'    => 'ASC',
+								    'hide_empty' => 0
+								) );
+								foreach( $authors as $author ) {
+									$author_link = get_term_link( $author->slug, 'pa_autor' );
+									echo '<li><a href="' . $author_link . '">' . $author->name . '</a></li>';
+								}
+
+	 							?>
+							</ul>
 						</article>
 
 					</div>
@@ -59,7 +73,7 @@
 
 			</div>
 		</section>
-		
+
 <?php endwhile; endif; ?>
 
 <?php get_footer( 'shop' ); ?>
