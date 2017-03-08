@@ -2,9 +2,8 @@
 	<div class="blog-main-link">
 		<h1>
 			<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
-				<div class="blog-logo">
-				</div>
-				<span>blog</span>
+				<span>oficyna peryferie blog</span>
+				<span class="blog-title">ciekawsza strona druku</span>
 			</a>
 		</h1>
 	</div>

@@ -5,7 +5,7 @@ $headingFont: 'cervo_neuesemibold_neue', sans-serif;
 $standardKerning: 2px;
 $smallKerning: 1px;
 
-html, p {
+html, p, li {
     font-family: $mainFontBold !important;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust:     100%;

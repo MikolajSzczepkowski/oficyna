@@ -3,11 +3,17 @@
 	padding-left: 15px !important;
 	padding-right: 15px !important;
 	@include netbook {
-		padding-left: 39px !important;
+		padding-left: 30px !important;
 		width: 290px !important;
 	}
 	@include desktop {
-		width: 308px !important;
+		width: 300px !important;
+	}
+}
+
+.main-section {
+	@include netbook {
+		padding-right: 0 !important;
 	}
 }
 
@@ -15,29 +21,26 @@
 	.blog-main-link {
 		margin-bottom: 75px;
 		a {
-			display: flex;
-			align-items: center;
 			text-transform: uppercase;
+			text-align: center;
 			color: $blue !important;
 			&:hover {
 				color: $black !important;
-				.blog-logo {
-					background-image: url("/wp-content/themes/oficyna_peryferie/images/logo-full-black.png");
-				}
 			}
-			.blog-logo {
-				width: 100px;
-				height: 102px;
-				margin-right: 15px;
-				background-image: url("/wp-content/themes/oficyna_peryferie/images/logo-hover.png");
-				background-position: center;
-				background-size: contain;
-				transition: background .3s ease-out;
+			span {
+				display: block;
+				font-size: small;
+			}
+			.blog-title {
+				font-size: inherit;
 			}
 		}
 	}
 	article {
 		padding: 15px !important;
+		@include netbook {
+			padding: 15px 0 15px 15px !important;
+		}
 	}
 	h2 {
 		font-family: $mainFontBold !important;
@@ -290,7 +293,7 @@
 	.blog-post-text {
 		padding: 0 !important;
 		@include netbook {
-			padding: 0 0 0 30px !important;
+			padding: 0 0 0 11px !important;
 		}
 	}
 	.post-info {

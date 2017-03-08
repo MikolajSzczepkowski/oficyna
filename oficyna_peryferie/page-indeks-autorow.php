@@ -13,7 +13,7 @@
 
 						<article id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<?php the_content(); ?>
-							<ul class="shop-map-list">
+							<ul>
 								<?php
 
 								$authors = get_terms( 'pa_autor', array(
@@ -22,7 +22,7 @@
 								) );
 								foreach( $authors as $author ) {
 									$author_link = get_term_link( $author->slug, 'pa_autor' );
-									echo '<li><a href="' . $author_link . '">' . $author->name . '</a></li>';
+									echo '<li class=""><a href="' . $author_link . '">' . $author->name . '</a></li>';
 								}
 
 	 							?>
