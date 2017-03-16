@@ -465,3 +465,52 @@
 		}
 	}
 }
+
+.product {
+	.images {
+		@include netbook {
+			width: 440px !important;
+		}
+		@include desktop {
+			width: 540px !important;
+		}
+		.thumbnails-container {
+			position: relative;
+			> span {
+				position: absolute;
+				display: flex;
+			    justify-content: center;
+			    align-items: center;
+				top: 45%;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				cursor: pointer;
+				color: $white;
+				background-color: $blue;
+				transition: background-color .3s;
+				&:hover {
+					background-color: $black;
+				}
+				.fa {
+					font-size: 12px;
+				}
+			}
+			#prev-slide {
+				left: -25px;
+			}
+			#next-slide {
+				right: -25px;
+			}
+		}
+		.thumbnails {
+			overflow: hidden;
+			white-space: nowrap;
+			a {
+				float: none !important;
+				display: inline-block;
+				margin-right: 3.8% !important;
+			}
+		}
+	}
+}
