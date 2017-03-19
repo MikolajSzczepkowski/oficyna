@@ -186,6 +186,19 @@
             }
         }
 
+        function shortenPostExcerpt() {
+            var postExcerpt = jQuery('.vc_gitem-post-data-source-post_excerpt');
+            jQuery.map(postExcerpt, function(excerpt) {
+                var postExcerptPara = jQuery(excerpt).find("p").eq(1);
+                var textArray = postExcerptPara.text().split(" ");
+                if(textArray.length > 15) {
+                    var cutText = textArray.slice(0, 15);
+                    var returnText = cutText.join(" ");
+                    postExcerptPara.html(returnText + "...");
+                }
+            });
+        }
+
         function init() {
            slideUp();
            slideDown();
@@ -196,6 +209,7 @@
            checkWindowSize();
            runTypographer();
            productSlider();
+           setTimeout(shortenPostExcerpt, 3000);
         }
 
         return {
@@ -203,7 +217,9 @@
         };
     }
 
-    var controller = new PageController();
-    controller.init();
+    jQuery(document).ready(function() {
+        var controller = new PageController();
+        controller.init();
+    });
 
 })(jQuery);
