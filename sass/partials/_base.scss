@@ -167,6 +167,17 @@ h2, .wpb_willow_big_title {
 	}
 }
 
+.caption {
+    em, strong {
+        font-size: .8em !important;
+        line-height: .5 !important;
+    }
+}
+
+.wpb_single_image + .caption {
+	margin-top: -35px;	
+}
+
 .vc_general.vc_pagination.vc_pagination-style-outline.vc_pagination-shape-round.vc_pagination-color-blue {
 	a {
 		border-color: $blue !important;

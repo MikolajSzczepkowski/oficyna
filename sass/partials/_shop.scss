@@ -452,6 +452,13 @@
 			.vc_column-inner {
 				padding: 0 !important;
 			}
+			.wpb_row {
+				.vc_col-sm-12 {
+					@include netbook {
+						padding: 0 8px !important;	
+					}
+				}
+			}
 		}
 		.products {
 			li {
