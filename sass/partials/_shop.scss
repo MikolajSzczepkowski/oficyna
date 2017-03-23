@@ -29,6 +29,18 @@
 			}
 		}
 		li {
+			&:first-of-type {
+				a {
+					&::after {
+						content: ("ciekawsza strona druku");
+						position: absolute;
+						top: 3px;
+						right: -97%;
+						font-style: italic;
+						text-transform: lowercase;
+					}
+				}
+			}
 			a {
 				color: $white !important;
 				&:hover {
@@ -350,7 +362,8 @@
 			}
 		}
 	}
-	.woocommerce-message {
+	.woocommerce-message,
+	.woocommerce-info {
 		border-top-color: $blue;
 		&:before {
 			color: $blue;
@@ -362,6 +375,38 @@
 	}
 	.woocommerce table.shop_table td {
 		padding: 11px 12px !important;
+	}
+	.woocommerce-validated {
+		input {
+			border-color: $blue !important;
+		}
+	}
+	.woocommerce-billing-fields {
+		label {
+			font-size: 16px !important;
+		}
+		input {
+			font-family: $mainFontBold !important;
+			font-size: 16px !important;
+		}
+	}
+	.woocommerce-shipping-fields textarea,
+	.select2-container {
+		font-family: $mainFontBold !important;
+		font-size: 16px !important;
+	}
+	.shop_table th,
+	.shop_table td {
+		font-size: 16px !important;
+	}
+	#paczkomat_id ~ a {
+		display: block;
+	}
+	.wc_payment_methods,
+	.terms {
+		label {
+			font-size: 16px !important;
+		}
 	}
 }
 
@@ -455,7 +500,7 @@
 			.wpb_row {
 				.vc_col-sm-12 {
 					@include netbook {
-						padding: 0 8px !important;	
+						padding: 0 8px !important;
 					}
 				}
 			}
