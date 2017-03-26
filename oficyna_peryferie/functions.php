@@ -54,6 +54,16 @@
 	    }
 	}
 
+	function stock_diaplay() {
+	    global $product;
+	    if ( $product->is_in_stock() ) {
+	        echo '<p class="stock" >' . $product->get_stock_quantity() . __( ' Na stanie', 'envy' ) . '</p>';
+	    } else {
+	        echo '<p class="out-of-stock" >' . __( 'Brak', 'envy' ) . '</p>';
+	    }
+	}
+	add_action( 'woocommerce_after_shop_loop_item_title', 'stock_diaplay' );
+
 
 	add_filter( 'woocommerce_breadcrumb_home_url', 'woo_custom_breadrumb_home_url' );
 	function woo_custom_breadrumb_home_url() {

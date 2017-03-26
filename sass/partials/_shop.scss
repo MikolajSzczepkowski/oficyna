@@ -160,6 +160,7 @@
 			display: none !important;
 			margin-top: 30px;
 			font-size: 14px !important;
+			line-height: 18px !important;
 			&:first-of-type {
 				display: block !important;
 			}
@@ -173,6 +174,13 @@
 			font-size: 14px !important;
 			color: $grey !important;
 		}
+		.product-price {
+			>span {
+				padding: 5px;
+				background-color: $rose;
+				transition: .3s;
+			}
+		}
 		a:first-of-type {
 			&:hover {
 				img {
@@ -182,6 +190,11 @@
 				h3, p {
 					transition: color .3s;
 					color: $black !important;
+				}
+				.product-price {
+					>span {
+						color: $black !important;
+					}
 				}
 			}
 			h3, p {
@@ -581,6 +594,17 @@
 				display: inline-block;
 				margin-right: 3.8% !important;
 			}
+		}
+	}
+	.summary {
+		.stock,
+		.out-of-stock {
+			margin-bottom: 20px !important;
+			color: $black !important;
+		}
+
+		.stock.out-of-stock {
+			display: none !important;
 		}
 	}
 }

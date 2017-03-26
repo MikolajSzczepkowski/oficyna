@@ -57,6 +57,8 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 echo $autor;
 	?></p>
 
+	<p class="product-price"><?php echo $product->get_price_html(); ?></p>
+
 	 <?php
 	/**
 	 * woocommerce_after_shop_loop_item_title hook.
