@@ -55,6 +55,22 @@
 					background-image: url("/wp-content/themes/oficyna_peryferie/images/wojciechobuchowicz-hover.png");
 				}
 			}
+			.realization {
+				display: inline-block;
+				position: relative;
+				top: 6px;
+				width: 55px;
+				height: 55px;
+				padding: 14px;
+				text-align: center;
+				text-transform: uppercase;
+				border: 2px dashed $blue;
+				border-radius: 50%;
+				transition: border .3s;
+				&:hover {
+					border: 2px dashed $black;
+				}
+			}
 		}
 	}
 	h5 {

@@ -83,7 +83,7 @@
 							<h5>KREACJA</h5><a href="https://www.behance.net/neilan" target="_blank"><div class="creation"></div></a>
 						</li>
 						<li>
-							<h5>REALIZACJA</h5><a href="https://github.com/MikolajSzczepkowski" target="_blank">MIKOŁAJ SZCZEPKOWSKI</a>
+							<h5>REALIZACJA</h5><a href="https://github.com/MikolajSzczepkowski" target="_blank"><div class="realization">m</div></a>
 						</li>
 					</ul>
 				</section>

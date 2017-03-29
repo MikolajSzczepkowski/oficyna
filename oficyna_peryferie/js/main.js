@@ -115,31 +115,31 @@
                         var active = jQuery(this).find(jQuery(".vc_active"));
                         var nextPanel = active.next();
                         var circles = jQuery(this).next().find("span");
-                        active.fadeOut();
+                        active.fadeOut('slow');
                         active.removeClass("vc_active");
                         circles.removeClass("circle-active");
                         if (nextPanel.length == 0) {
                             jQuery(this).children().first().addClass("vc_active");
-                            jQuery(this).children().first().fadeIn();
+                            jQuery(this).children().first().fadeIn('slow');
                         }
                         else {
                             nextPanel.addClass("vc_active");
-                            nextPanel.fadeIn();
+                            nextPanel.fadeIn('slow');
                         }
                         var currentPanelIndex = jQuery(this).find(jQuery(".vc_active")).index();
                         jQuery(circles[currentPanelIndex]).addClass("circle-active");
                     });
-                }, 3000);
+                }, 5000);
             }
             intervalCall();
             jQuery(".vc_tta-panels-container span").on("click", function() {
                 var clickedCircleIndex = jQuery(this).parent().index();
                 var closestPanel = jQuery(this).parent().parent().prev().find(".vc_tta-panel");
                 clearInterval(rotateInterval);
-                closestPanel.fadeOut();
+                closestPanel.fadeOut('slow');
                 closestPanel.removeClass("vc_active");
                 panelsContainer.next().find("span").removeClass("circle-active");
-                jQuery(closestPanel[clickedCircleIndex]).fadeIn();
+                jQuery(closestPanel[clickedCircleIndex]).fadeIn('slow');
                 jQuery(closestPanel[clickedCircleIndex]).addClass("vc_active");
                 jQuery(this).addClass("circle-active");
                 intervalCall();

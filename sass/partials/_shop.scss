@@ -127,13 +127,20 @@
 .products {
 	display: flex !important;
 	flex-wrap: wrap !important;
+	flex-direction: column;
 	@media (max-width: 770px) {
 		justify-content: center;
     }
+	@include netbook {
+		flex-direction: row;
+	}
 	li {
-		margin-bottom: 30px;
+		margin-bottom: 50px;
+		padding: 0 !important;
+		@include tablet {
+			padding: 0 15px !important;
+		}
 		@include netbook {
-			padding: 0 !important;
 			&:nth-of-type(3n+1) {
 				padding: 0 20px 0 0 !important;
 			}
