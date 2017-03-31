@@ -133,6 +133,7 @@
 			content: none !important;
 		}
 		a {
+			font-size: 16px !important;
 			color: $blue !important;
 			&:hover {
 				color: $black !important;
@@ -254,6 +255,18 @@
 			.vc_col-sm-8 {
 				@include netbook {
 					padding: 0 0 0 10px !important;
+				}
+			}
+		}
+		.wpb_row.left-23 {
+			.vc_col-sm-8 {
+				@include netbook {
+					padding: 0 10px 0 0 !important;
+				}
+			}
+			.vc_col-sm-4 {
+				@include netbook {
+					padding: 0 0 0 20px !important;
 				}
 			}
 		}

@@ -5,7 +5,7 @@ $headingFont: 'cervo_neuesemibold_neue', sans-serif;
 $standardKerning: 2px;
 $smallKerning: 1px;
 
-html, p, li, td {
+html, p, li, td, address {
     font-family: $mainFontBold !important;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust:     100%;
@@ -72,9 +72,10 @@ p,
 h4,
 .nav li a,
 .sidebar-categories li a,
-.menu li a {
+.menu li a,
+address {
     font-size: 1.4em !important;
-    line-height: 1.3 !important;
+    line-height: 1.5 !important;
 }
 
 .bigger-text {

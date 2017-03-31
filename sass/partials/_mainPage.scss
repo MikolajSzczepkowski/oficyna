@@ -3,6 +3,15 @@
 	padding: 0;
 }
 .main-rotator {
+	.vc_tta-panels-container {
+		@include netbook {
+			min-height: 800px;
+		}
+		@include desktop {
+			min-height: 1000px;	
+		}
+	}
+
 	.vc_tta-panel-body {
 		border : 0 !important;
 		.separator {

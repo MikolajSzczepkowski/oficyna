@@ -32,10 +32,10 @@
 			&:first-of-type {
 				a {
 					&::after {
-						content: ("ciekawsza strona druku");
+						content: ("– ciekawsza strona druku");
 						position: absolute;
 						top: 3px;
-						right: -97%;
+						right: -108%;
 						font-style: italic;
 						text-transform: lowercase;
 					}
@@ -95,6 +95,50 @@
 	.input-text {
 		font-family: $headingFont !important;
 		font-size: 14px !important;
+	}
+
+	.woocommerce-thankyou-order-received {
+		margin-bottom: 15px !important;
+	}
+
+	.wc-bacs-bank-details-heading,
+	.wc-bacs-bank-details-heading ~ h2 {
+		font-size: 24px !important;
+	}
+
+	.wc-bacs-bank-details-heading ~ h3 {
+		font-size: 1.4em !important;
+	    line-height: 1.5 !important;
+		font-family: $mainFontBold !important;
+		color: $black !important;
+		font-weight: 400;
+	}
+
+	.woocommerce-thankyou-order-details,
+	.wc-bacs-bank-details {
+		padding: 0 !important;
+		li {
+			width: 31% !important;
+			margin-bottom: 15px;
+			border-right: 0 !important;
+			font-size: 16px !important;
+			font-family: $headingFont !important;
+			text-transform: none;
+			span {
+				font-size: 24.4px !important;
+			    text-transform: none;
+			    line-height: 1.5;
+			}
+			strong {
+				margin-top: 5px;
+				color: $blue;
+			}
+		}
+	}
+	.wc-bacs-bank-details {
+		li {
+			width: 100% !important;
+		}
 	}
 }
 .shop-main {
@@ -165,16 +209,16 @@
 		}
 		.shop-category {
 			display: none !important;
-			margin-top: 30px;
-			font-size: 14px !important;
-			line-height: 18px !important;
-			&:first-of-type {
-				display: block !important;
-			}
+			// margin-top: 30px;
+			// font-size: 14px !important;
+			// line-height: 18px !important;
+			// &:first-of-type {
+			// 	display: block !important;
+			// }
 		}
 		h3 {
 			font-size: 14px !important;
-			margin-top: 5px !important;
+			margin-top: 15px !important;
 			margin-bottom: 7px !important;
 		}
 		p {
@@ -338,12 +382,24 @@
 		}
 		.cart_totals {
 			padding-right: 19px;
+			table {
+				@include netbook {
+					width: 440px;
+
+					th {
+						width: 15%;
+					}
+				}
+				@include desktop {
+					width: 540px;
+				}
+			}
 		}
 	}
 	h2 {
 		margin: 50px 0 25px 0;
 		@include tablet {
-			font-size: 3em !important;
+			font-size: 2.5em !important;
 		}
 	}
 	table {
@@ -352,6 +408,18 @@
 	#customer_details {
 		p {
 			padding: 0 !important;
+			margin: 0 0 30px 0 !important;
+		}
+		.form-row-wide {
+			width: 47% !important;
+		}
+		#billing_rachunek_field {
+			label {
+				font-size: 12px !important;
+			}
+			input {
+				margin: 8px -10px 0 0 !important;
+			}
 		}
 		@include netbook {
 			.col-1, .col-2 {
