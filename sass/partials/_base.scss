@@ -30,6 +30,10 @@ a, button, input, select {
 		margin-left: 5px;
 		span {
 			left: 11px !important;
+			top: 11px !important;
+			@include netbook {
+				top: 10px !important;	
+			}
 		}
 	}
 	.vc_icon_element {
