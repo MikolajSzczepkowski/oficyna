@@ -25,18 +25,18 @@ a, button, input, select {
 		margin-bottom: 0 !important;
 	}
 	.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-size-xs.vc_icon_element-have-style-inner {
-		width: 1.2em !important;
-		height: 1.2em !important;
+		width: 20px !important;
+		height: 20px !important;
 		margin-left: 5px;
 		span {
-			left: 55% !important;
+			left: 11px !important;
 		}
 	}
 	.vc_icon_element {
 		.vc_icon_element-inner {
 			transform: rotate(45deg)!important;
 			.vc_icon_element-icon.fa.fa-circle {
-				font-size: 1em!important;
+				font-size: 14px!important;
 			}
 		}
 	}
@@ -174,8 +174,9 @@ h2, .wpb_willow_big_title {
     }
 }
 
-.wpb_single_image + .caption {
-	margin-top: -35px;	
+.wpb_single_image + .caption,
+.wpb_gmaps_widget + .caption {
+	margin-top: -35px;
 }
 
 .vc_general.vc_pagination.vc_pagination-style-outline.vc_pagination-shape-round.vc_pagination-color-blue {
@@ -376,4 +377,20 @@ h2, .wpb_willow_big_title {
 
 .alignnone {
 	margin: 5px 20px 5px 0 !important;
+}
+
+.wpb_row {
+	li {
+		font-size: 1.4em !important;
+	    line-height: 1.5 !important;
+	}
+}
+
+.page-not-found {
+	>* {
+		margin-bottom: 30px;
+	}
+	img {
+		background-color: $white;
+	}
 }

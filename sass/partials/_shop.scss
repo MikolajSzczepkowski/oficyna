@@ -35,7 +35,7 @@
 						content: ("– ciekawsza strona druku");
 						position: absolute;
 						top: 3px;
-						right: -108%;
+						right: -104%;
 						font-style: italic;
 						text-transform: lowercase;
 					}
@@ -137,7 +137,7 @@
 	}
 	.wc-bacs-bank-details {
 		li {
-			width: 100% !important;
+			width: 100%
 		}
 	}
 }
@@ -496,6 +496,57 @@
 			font-size: 16px !important;
 		}
 	}
+	.content-section {
+		background-color: transparent !important;
+		.container {
+			padding: 0 !important;
+			.vc_column-inner  {
+				padding: 0 !important;
+				ul {
+					padding: 15px !important;
+				}
+			}
+		}
+		.wpb_row {
+			margin: 0 !important;
+			.vc_col-sm-4 {
+				@include netbook {
+					padding: 0 !important;
+					&:nth-of-type(3n+1) {
+						padding: 0 20px 0 0 !important;
+					}
+					&:nth-of-type(3n+2) {
+						padding: 0 10px !important;
+					}
+					&:nth-of-type(3n+0) {
+						padding: 0 0 0 20px !important;
+					}
+					.wpb_single_image {
+						img {
+							width: 250px;
+						}
+					}
+				}
+			}
+			.vc_col-sm-8 {
+				@include netbook {
+					padding: 0 0 0 10px !important;
+				}
+			}
+		}
+		.wpb_row.left-23 {
+			.vc_col-sm-8 {
+				@include netbook {
+					padding: 0 10px 0 0 !important;
+				}
+			}
+			.vc_col-sm-4 {
+				@include netbook {
+					padding: 0 0 0 20px !important;
+				}
+			}
+		}
+	}
 }
 
 .search {
@@ -584,13 +635,6 @@
 			padding: 0 !important;
 			.vc_column-inner {
 				padding: 0 !important;
-			}
-			.wpb_row {
-				.vc_col-sm-12 {
-					@include netbook {
-						padding: 0 8px !important;
-					}
-				}
 			}
 		}
 		.products {
