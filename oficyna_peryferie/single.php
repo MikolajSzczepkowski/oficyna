@@ -31,23 +31,18 @@
 						<h3 class="widget-title"><span><?php _e( 'INNE POWIĄZANE WPISY', 'willow' ); ?></span></h3>
 						<ul class="related-posts-list row">
 							<?php while ( have_posts() ) : the_post(); ?>
-								<li <?php post_class( 'grid-post related-post col-sm-3 col-md-6 col-lg-3' ); ?>>
+								<li <?php post_class( 'grid-post related-post col-sm-3 col-md-6 col-lg-4' ); ?>>
 									<div class="related-post-date">
 										<?php echo get_the_date(); ?>
 										<hr>
 									</div>
-									<p class="related-post-category">
-										kategoria
-										<?php $categories = get_the_category();
-											echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>'; ?>
-									</p>
 									<h3 class="related-post-title">
 										<a href="<?php the_permalink(); ?>">
 											<?php the_title(); ?>
 										</a>
 									</h3>
 									<p class="related-post-excerpt">
-										<?php the_excerpt(); ?>
+										<?php echo excerpt(10); ?>
 									</p>
 									<a class="related-post-read-more" href="<?php the_permalink(); ?>">CZYTAJ DALEJ</a>
 								</li>

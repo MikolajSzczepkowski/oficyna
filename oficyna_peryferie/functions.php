@@ -86,4 +86,9 @@
 	// remove wp version number in head
 	remove_action('wp_head', 'wp_generator');
 
+
+	function excerpt($limit) {
+	    return wp_trim_words(get_the_excerpt(), $limit);
+	}
+
 ?>

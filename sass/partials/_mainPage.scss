@@ -8,7 +8,7 @@
 			min-height: 800px;
 		}
 		@include desktop {
-			min-height: 1000px;	
+			min-height: 1000px;
 		}
 	}
 
@@ -186,20 +186,18 @@
 }
 
 .latest-post {
-	@include tablet {
-		height: 550px !important;
-	}
-	@include netbook {
-		height: 450px !important;
-	}
-	@include desktop {
-		height: 400px !important;
-	}
+	height: auto !important;
+	margin-bottom: 30px;
+
 	.vc_gitem-row-position-top {
 		z-index: 1;
+		position: relative !important;
 	}
 	.vc_gitem-row-position-middle {
 		top: 30% !important;
+		position: relative !important;
+		transform: none !important;
+
 		>div {
 			padding-left: 0 !important;
 		}
@@ -215,6 +213,8 @@
 		}
 	}
 	.vc_gitem-row-position-bottom {
+		position: relative !important;
+
 		>div {
 			padding-left: 0 !important;
 		}
