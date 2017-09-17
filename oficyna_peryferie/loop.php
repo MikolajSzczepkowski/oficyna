@@ -3,7 +3,7 @@
 		<h1>
 			<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
 				<span>oficyna peryferie blog</span>
-				<span class="blog-title">ciekawsza strona druku</span>
+				<span class="blog-title"><?php if ( pll_current_language() == 'pl' ) : ?>ciekawsza strona druku<?php else : ?>make print great again<?php endif; ?></span>
 			</a>
 		</h1>
 	</div>
@@ -26,8 +26,8 @@
 
 					<ul class="post-info blue-text">
 						<li class="post-info-date"><?php echo get_the_date(); ?><hr></li>
-						<li class="post-info-category"><span>KATEGORIA </span> <?php echo the_category(); ?></li>
-						<li class="post-info-author"><span>AUTOR </span> <?php echo the_author_posts_link(); ?></li>
+						<li class="post-info-category"><span><?php if ( pll_current_language() == 'pl' ) : ?>KATEGORIA<?php else : ?>CATEGORY<?php endif; ?> </span> <?php echo the_category(); ?></li>
+						<li class="post-info-author"><span><?php if ( pll_current_language() == 'pl' ) : ?>AUTOR<?php else : ?>AUTHOR<?php endif; ?> </span> <?php echo the_author_posts_link(); ?></li>
 					</ul>
 
 					<div class="col-lg-8 col-lg-offset-4 blog-post-text">
@@ -39,7 +39,7 @@
 						<div class="post-content blue-text">
 							<?php the_excerpt(); ?>
 						</div>
-						<a class="blog-post-read-more" href="<?php the_permalink(); ?>">CZYTAJ DALEJ</a>
+						<a class="blog-post-read-more" href="<?php the_permalink(); ?>"><?php if ( pll_current_language() == 'pl' ) : ?>CZYTAJ DALEJ<?php else : ?>READ MORE<?php endif; ?></a>
 						<div class="post-tags tagcloud">
 							<?php the_tags( '', '', '' ); ?>
 						</div>
@@ -50,8 +50,8 @@
 			<?php if ( is_single() ) : ?>
 				<ul class="post-info blue-text">
 					<li class="post-info-date"><?php echo get_the_date(); ?><hr></li>
-					<li class="post-info-category"><span>KATEGORIA </span> <?php echo the_category(); ?></li>
-					<li class="post-info-author"><span>AUTOR </span> <?php echo the_author_posts_link(); ?></li>
+					<li class="post-info-category"><span><?php if ( pll_current_language() == 'pl' ) : ?>KATEGORIA<?php else : ?>CATEGORY<?php endif; ?> </span> <?php echo the_category(); ?></li>
+					<li class="post-info-author"><span><?php if ( pll_current_language() == 'pl' ) : ?>AUTOR<?php else : ?>AUTHOR<?php endif; ?> </span> <?php echo the_author_posts_link(); ?></li>
 				</ul>
 
 				<h2 class="post-title bigger-text">
@@ -91,7 +91,7 @@
 					<?php the_tags( '', '', '' ); ?>
 				</div>
 				<div class="share-buttons">
-					<h4>PODZIEL SIĘ</h4>
+					<h4><?php if ( pll_current_language() == 'pl' ) : ?>PODZIEL SIĘ<?php else : ?>SHARE<?php endif; ?></h4>
 					<?php echo do_shortcode('[addtoany buttons="facebook,twitter,linkedin,pinterest"]'); ?>
 				</div>
 

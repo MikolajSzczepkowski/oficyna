@@ -80,10 +80,10 @@
 					</div>
 					<ul>
 						<li>
-							<h5>KREACJA</h5><a href="https://www.behance.net/neilan" target="_blank"><div class="creation"></div></a>
+							<h5><?php if ( pll_current_language() == 'pl' ) : ?>KREACJA<?php else : ?>CREATION<?php endif; ?></h5><a href="https://www.behance.net/neilan" target="_blank"><div class="creation"></div></a>
 						</li>
 						<li>
-							<h5>REALIZACJA</h5><a href="https://github.com/MikolajSzczepkowski" target="_blank"><div class="realization">m</div></a>
+							<h5><?php if ( pll_current_language() == 'pl' ) : ?>REALIZACJA<?php else : ?>DEVELOPMENT<?php endif; ?></h5><a href="https://github.com/MikolajSzczepkowski" target="_blank"><div class="realization">m</div></a>
 						</li>
 					</ul>
 				</section>
@@ -109,6 +109,8 @@
 		<!-- END CUSTOM FOOTER SCRIPTS -->
 
 		<?php wp_footer(); ?>
+
+		<button id="go-up" class="no-show"><?php if ( pll_current_language() == 'pl' ) : ?>POWRÓT DO GÓRY<?php else : ?>GO UP<?php endif; ?></button>
 
 	</body>
 

@@ -4,7 +4,6 @@
 
     var PageController = function () {
         function slideUp() {
-            jQuery('body').append(jQuery('<button id="go-up" class="no-show">POWRÓT DO GÓRY</button>'));
             jQuery('#go-up').on('click', function() {
                 jQuery("html, body").animate({scrollTop: 0}, 1000);
                 return false;

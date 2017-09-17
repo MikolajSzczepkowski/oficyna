@@ -44,7 +44,7 @@
 									<p class="related-post-excerpt">
 										<?php echo excerpt(10); ?>
 									</p>
-									<a class="related-post-read-more" href="<?php the_permalink(); ?>">CZYTAJ DALEJ</a>
+									<a class="related-post-read-more" href="<?php the_permalink(); ?>"><?php if ( pll_current_language() == 'pl' ) : ?>CZYTAJ DALEJ<?php else : ?>READ MORE<?php endif; ?></a>
 								</li>
 							<?php endwhile; ?>
 						</ul>
