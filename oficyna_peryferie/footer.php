@@ -1,12 +1,12 @@
 			<footer>
 				<section class="newsteller-section">
 					<div class="newsletter-wrapper">
-						<h3>Chcesz być na bieżąco?</h3>
+						<h3><?php if ( pll_current_language() == 'pl' ) : ?>Chcesz być na bieżąco?<?php else : ?>Want to keep up?<?php endif; ?></h3>
 						<p>
-							Zapisz się do naszego newslettera, aby otrzymać informacje o aktualnych warsztatach i kursach oraz nowych publikacjach.
+							<?php if ( pll_current_language() == 'pl' ) : ?>Zapisz się do naszego newslettera, aby otrzymać informacje o aktualnych warsztatach i kursach oraz nowych publikacjach.<?php else : ?>Sign up for our newsletter to get updates on current workshops new publications.<?php endif; ?>
 						</p>
-						<?php mc4wp_show_form(); ?>
-						<h5>OBIECUJEMY NIE SPAMOWAĆ. W KAŻDEJ CHWILI MOŻESZ WYPISAĆ SIĘ Z NEWSLETTERA.</h5>
+						<div class="newsletter-form"><?php if ( pll_current_language() == 'pl' ) : ?><?php echo do_shortcode('[FM_form id="2"]') ?><?php else : ?><?php echo do_shortcode( '[FM_form id="1"]' ); ?></div><?php endif; ?>
+						<h5><?php if ( pll_current_language() == 'pl' ) : ?>OBIECUJEMY NIE SPAMOWAĆ. W KAŻDEJ CHWILI MOŻESZ WYPISAĆ SIĘ Z NEWSLETTERA.<?php else : ?>WE PROMISE NOT TO SPAM YOU. YOU CAN UNSUBSCRIBE US AT ANY TIME.<?php endif; ?></h5>
 					</div>
 				</section>
 				<section class="footer-wrapper">

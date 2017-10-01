@@ -32,6 +32,19 @@
             jQuery(".menu-item-has-children > a").append(arrow);
         }
 
+        function langController() {
+            var $language = jQuery('.lang-item a');
+
+            jQuery.map( $language, function( el, i) {
+                var $el = jQuery(el);
+                var langName = $el.attr('lang');
+                var langShort = langName.substring(0,2);
+
+                $el.html(langShort);
+
+            });
+        }
+
         function offerModuleController() {
             var imageContainer = jQuery(".offer-inner-module-img img");
             var initialSrc = imageContainer.attr("src");
@@ -208,6 +221,7 @@
            checkWindowSize();
            runTypographer();
            productSlider();
+           langController();
            setTimeout(shortenPostExcerpt, 3000);
         }
 

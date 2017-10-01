@@ -48,6 +48,7 @@
 	top: 0 !important;
 }
 .nav {
+	position: relative;
 	display: block;
 	justify-content: space-between;
 	float: none !important;
@@ -59,6 +60,11 @@
 		a {
 			color: $blue !important;
 			font-family: $headingFont;
+
+			@include netbook {
+				padding: 3px 0 !important;
+			}
+
 			&:hover {
 				color: $black !important;
 			}
@@ -66,6 +72,36 @@
 				margin-left: 5px;
 				font-size: 10px;
 				transition: transform 1s;
+			}
+		}
+	}
+
+	// language item
+	li.lang-item {
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		a {
+			width: 47px;
+			height: 47px;
+			padding: 10px 15px 3px !important;
+			vertical-align: middle;
+			background-color: $blue;
+			color: $rose !important;
+			border-radius: 50%;
+			border: 1px solid $blue;
+			transition: 1s;
+
+			@include netbook {
+				transform: translateY(-5px);
+			}
+
+			&:hover {
+				background-color: $white;
+				color: $black !important;
+				text-decoration: none!important;
+				transition: 1s;
 			}
 		}
 	}
@@ -89,6 +125,7 @@
 		}
 	}
 }
+
 
 .floating {
 	.sub-menu {

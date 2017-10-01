@@ -27,7 +27,6 @@
 					<ul class="post-info blue-text">
 						<li class="post-info-date"><?php echo get_the_date(); ?><hr></li>
 						<li class="post-info-category"><span><?php if ( pll_current_language() == 'pl' ) : ?>KATEGORIA<?php else : ?>CATEGORY<?php endif; ?> </span> <?php echo the_category(); ?></li>
-						<li class="post-info-author"><span><?php if ( pll_current_language() == 'pl' ) : ?>AUTOR<?php else : ?>AUTHOR<?php endif; ?> </span> <?php echo the_author_posts_link(); ?></li>
 					</ul>
 
 					<div class="col-lg-8 col-lg-offset-4 blog-post-text">
@@ -51,7 +50,6 @@
 				<ul class="post-info blue-text">
 					<li class="post-info-date"><?php echo get_the_date(); ?><hr></li>
 					<li class="post-info-category"><span><?php if ( pll_current_language() == 'pl' ) : ?>KATEGORIA<?php else : ?>CATEGORY<?php endif; ?> </span> <?php echo the_category(); ?></li>
-					<li class="post-info-author"><span><?php if ( pll_current_language() == 'pl' ) : ?>AUTOR<?php else : ?>AUTHOR<?php endif; ?> </span> <?php echo the_author_posts_link(); ?></li>
 				</ul>
 
 				<h2 class="post-title bigger-text">

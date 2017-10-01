@@ -228,48 +228,126 @@ h2, .wpb_willow_big_title {
 }
 
 .newsletter-form {
+	display: block;
+
 	@include netbook {
 		display: block;
 		width: 650px;
 		margin: auto;
+
+		.message_error {
+			margin-left: 10px;
+		}
+		.message_success {
+			display: block;
+			text-align: center;
+		}
 	}
-	div {
+
+
+	form > div {
 		width: 260px;
 		height: 50px;
-		margin: 20px auto;
+		margin: 20px auto !important;
+
+		input {
+			padding-left: 15px !important;
+			font-size: 14px !important;
+			font-family: $mainFontBold !important;
+			letter-spacing: $smallKerning;
+		}
+
+		@include netbook {
+			width: 365px;
+			margin: 5px !important;
+			display: inline-block;
+		}
+	}
+
+	form > p {
+		z-index: 1;
+		position: relative;
+		height: 50px;
+		border: 1px solid $blue !important;
+		background-image: none !important;
+		transition: all .2s ease-in-out;
+		text-transform: uppercase;
+
+		width: 260px;
+		height: 50px;
+		margin: 20px auto !important;
+		padding: 0 !important;
+		background-color: $white !important;
+
+		button {
+			width: 100% !important;
+			height: 100% !important;
+			border-radius: 0 !important;
+			padding-left: 15px;
+			border: 1px solid $blue !important;
+			font-size: 14px !important;
+			font-family: $mainFontBold !important;
+			letter-spacing: $smallKerning;
+			transition: all .2s ease-in-out;
+			cursor: pointer;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: -5px;
+			right: -5px;
+			min-width: 250px;
+			height: 50px;
+			background-color: $lightGrey !important;
+			border: 1px solid $blue;
+		}
+		&:hover {
+			button {
+				transition: all .2s ease-in-out;
+				color: $white !important;
+				background-image: none !important;
+				text-decoration: underline !important;
+				border: 1px solid $rose !important;
+				background-color: $blue !important;
+			}
+			&::after {
+				border: 1px solid $blue !important;
+				background-color: $rose !important;
+			}
+		}
+
 		@include netbook {
 			margin: 5px;
 			display: inline-block;
-			&:nth-of-type(1) {
-				width: 365px;
-			}
 		}
-		label {
-			width: 100%;
-			height: 100%;
-			input {
-				width: 100%;
-				height: 100%;
-				border: 0;
-				background-color: darken($blue, 10%);
-				&:nth-of-type(1) {
-					padding-left: 15px;
-					font-size: 14px !important;
-					font-family: $mainFontBold !important;
-					letter-spacing: $smallKerning;
-				}
-			}
-			[type="submit"] {
-				background-color: transparent;
-				color: $blue !important;
-				&:hover {
-					color: $white !important;
-					text-decoration: underline !important;
-				}
-			}
+	}
+
+	input {
+		width: 100%;
+		height: 100% !important;
+		border: 0 !important;
+		background-color: darken($blue, 10%);
+		color: $white !important;
+
+		&:nth-of-type(1) {
+			padding-left: 15px;
+			font-size: 14px !important;
+			font-family: $mainFontBold !important;
+			letter-spacing: $smallKerning;
+		}
+	}
+
+	[type="submit"] {
+		background-color: transparent;
+		color: $blue !important;
+		&:hover {
+			color: $white !important;
+			text-decoration: underline !important;
 		}
 	}
 }
+
 
 #go-up {
 	position: fixed;

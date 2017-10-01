@@ -56,7 +56,7 @@ get_header( 'shop' ); ?>
 				<h3 class="widget-title">
 					<span>Nowości</span>
 				</h3>
-				<?php echo do_shortcode('[product_category category="nowosci"]'); ?>
+				<?php echo do_shortcode('[product_category category="nowosci-pl"]'); ?>
 
 				<h3 class="widget-title">
 					<span>Bestsellery</span>
