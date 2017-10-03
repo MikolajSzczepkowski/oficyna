@@ -18,6 +18,7 @@
 		}
 	}
 	.nav {
+		position: static;
 		display: block !important;
 		margin-top: 50px !important;
 		@include netbook {
@@ -35,7 +36,7 @@
 						content: ("– ciekawsza strona druku");
 						position: absolute;
 						top: 3px;
-						right: -104%;
+						right: -138%;
 						font-style: italic;
 						text-transform: lowercase;
 					}
@@ -46,6 +47,10 @@
 				&:hover {
 					color: $rose !important;
 				}
+			}
+
+			@include netbook {
+				padding: 3px 15px !important;
 			}
 		}
 	}
@@ -724,6 +729,22 @@
 
 		.stock.out-of-stock {
 			display: none !important;
+		}
+	}
+	.variations {
+		.label {
+			display: none;
+		}
+		select {
+			font-family: $headingFont !important;
+			min-width: 70%;
+			padding: 5px;
+			background-color: $white;
+			border: 1px solid $blue;
+			text-transform: uppercase;
+		}
+		option {
+			padding: 5px;
 		}
 	}
 }
