@@ -1,4 +1,4 @@
-<?php get_header( 'shop' ); ?>
+<?php get_header( 'shop-en' ); ?>
 
 <?php $is_using_vc = get_post_meta( get_the_ID(), '_wpb_vc_js_status', true ); ?>
 
@@ -13,6 +13,20 @@
 
 						<article id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<?php the_content(); ?>
+							<ul class="shop-map-list">
+								<?php
+
+								$editors = get_terms( 'pa_wydawca', array(
+								    'orderby'    => 'ASC',
+								    'hide_empty' => 0
+								) );
+								foreach( $editors as $editor ) {
+									$editor_link = get_term_link( $editor->slug, 'pa_wydawca' );
+									echo '<li><a href="' . $editor_link . '">' . $editor->name . '</a></li>';
+								}
+
+	 							?>
+							</ul>
 						</article>
 
 					</div>

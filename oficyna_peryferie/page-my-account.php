@@ -1,10 +1,20 @@
-<?php get_header( 'shop' ); ?>
+<?php get_header( 'shop-en' ); ?>
 
 <?php $is_using_vc = get_post_meta( get_the_ID(), '_wpb_vc_js_status', true ); ?>
 
 <?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
-		<section id="content" class="content-section section" <?php post_class( 'visual-composer-page' ); ?>>
+	<?php if ( $is_using_vc === 'true' ) : ?>
+
+		<div id="content" <?php post_class( 'visual-composer-page' ); ?>>
+
+			<?php the_content(); ?>
+
+		</div>
+
+	<?php else : ?>
+
+		<section id="content" class="content-section section">
 			<div class="container container-table shop-container">
 
 				<div class="col-md-9 col-md-push-3 shop-page" role="main">
@@ -59,6 +69,8 @@
 
 			</div>
 		</section>
+
+	<?php endif; ?>
 
 <?php endwhile; endif; ?>
 

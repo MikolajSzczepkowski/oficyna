@@ -20,42 +20,74 @@
 					</div>
 					<div class="container">
 						<div class="col-xs-12 col-sm-3">
-							<h4>mapa sklepu</h4>
-							<?php wp_nav_menu( array(
-								'menu' 				=> 'map-menu',
-								'depth'             => 0,
-								'container'         => false,
-							) ); ?>
+							<h4><?php if ( pll_current_language() == 'pl' ) : ?>mapa sklepu<?php else : ?>shop map<?php endif; ?></h4>
+							<?php if ( pll_current_language() == 'pl' ) : ?>
+								<?php wp_nav_menu( array(
+									'menu' 				=> 'map-menu',
+									'depth'             => 0,
+									'container'         => false,
+								) ); ?>
+							<?php else : ?>
+								<?php wp_nav_menu( array(
+									'menu' 				=> 'map-menu-en',
+									'depth'             => 0,
+									'container'         => false,
+								) ); ?>
+							<?php endif; ?>
 						</div>
 						<div class="col-xs-12 col-sm-3">
-							<h4>pomoc</h4>
-							<?php wp_nav_menu( array(
-								'menu' 				=> 'help-menu',
-								'depth'             => 0,
-								'container'         => false,
-							) ); ?>
+							<h4><?php if ( pll_current_language() == 'pl' ) : ?>pomoc<?php else : ?>help<?php endif; ?></h4>
+							<?php if ( pll_current_language() == 'pl' ) : ?>
+								<?php wp_nav_menu( array(
+									'menu' 				=> 'help-menu',
+									'depth'             => 0,
+									'container'         => false,
+								) ); ?>
+							<?php else : ?>
+								<?php wp_nav_menu( array(
+									'menu' 				=> 'help-menu-en',
+									'depth'             => 0,
+									'container'         => false,
+								) ); ?>
+							<?php endif; ?>
 						</div>
 						<div class="col-xs-12 col-sm-3">
-							<h4>warunki zakupów</h4>
-							<?php wp_nav_menu( array(
-								'menu' 				=> 'terms-menu',
-								'depth'             => 0,
-								'container'         => false,
-							) ); ?>
+							<h4><?php if ( pll_current_language() == 'pl' ) : ?>warunki zakupów<?php else : ?>purchase terms<?php endif; ?></h4>
+							<?php if ( pll_current_language() == 'pl' ) : ?>
+								<?php wp_nav_menu( array(
+									'menu' 				=> 'terms-menu',
+									'depth'             => 0,
+									'container'         => false,
+								) ); ?>
+							<?php else : ?>
+								<?php wp_nav_menu( array(
+									'menu' 				=> 'terms-menu-en',
+									'depth'             => 0,
+									'container'         => false,
+								) ); ?>
+							<?php endif; ?>
 						</div>
 						<div class="col-xs-12 col-sm-3">
 							<h4>oficyna peryferie</h4>
-							<?php wp_nav_menu( array(
-								'menu' 				=> 'oficyna-footer-shop-menu',
-								'depth'             => 0,
-								'container'         => false,
-							) ); ?>
+							<?php if ( pll_current_language() == 'pl' ) : ?>
+								<?php wp_nav_menu( array(
+									'menu' 				=> 'oficyna-footer-shop-menu',
+									'depth'             => 0,
+									'container'         => false,
+								) ); ?>
+							<?php else : ?>
+								<?php wp_nav_menu( array(
+									'menu' 				=> 'oficyna-footer-shop-menu-en',
+									'depth'             => 0,
+									'container'         => false,
+								) ); ?>
+							<?php endif; ?>
 						</div>
 					</div>
 				</section>
 				<section class="newsteller-section">
 					<div class="newsletter-wrapper">
-						<h3>Chcesz być na bieżąco?<?php if ( pll_current_language() == 'pl' ) : ?>Chcesz być na bieżąco?<?php else : ?>Want to keep up?<?php endif; ?></h3>
+						<h3><?php if ( pll_current_language() == 'pl' ) : ?>Chcesz być na bieżąco?<?php else : ?>Want to keep up?<?php endif; ?></h3>
 						<p>
 							<?php if ( pll_current_language() == 'pl' ) : ?>Zapisz się do naszego newslettera, aby otrzymać informacje o aktualnych warsztatach i kursach oraz nowych publikacjach.<?php else : ?>Sign up for our newsletter to get updates on current workshops new publications.<?php endif; ?>
 						</p>

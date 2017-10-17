@@ -1,4 +1,4 @@
-<?php get_header( 'shop' ); ?>
+<?php get_header( 'shop-en' ); ?>
 
 <?php $is_using_vc = get_post_meta( get_the_ID(), '_wpb_vc_js_status', true ); ?>
 

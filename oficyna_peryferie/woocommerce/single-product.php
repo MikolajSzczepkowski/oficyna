@@ -20,7 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-get_header( 'shop' ); ?>
+if ( pll_current_language() == 'pl' ) : get_header( 'shop' ); else : get_header( 'shop-en' ); endif;
+?>
 <div class="shop-container container">
 	<div class="col-md-9 col-md-push-3 shop-main">
 		<?php

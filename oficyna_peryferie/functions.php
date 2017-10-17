@@ -56,11 +56,23 @@
 
 	function stock_diaplay() {
 	    global $product;
-	    if ( $product->is_in_stock() ) {
-	        echo '<p class="stock" >' . $product->get_stock_quantity() . __( ' Na stanie', 'envy' ) . '</p>';
-	    } else {
-	        echo '<p class="out-of-stock" >' . __( 'Brak', 'envy' ) . '</p>';
-	    }
+		if (pll_current_language() == 'pl') {
+			if ( $product->is_in_stock() ) {
+		        echo '<p class="stock" >' . $product->get_stock_quantity() . __( 'Na stanie', 'envy' ) . '</p>';
+
+		    } else {
+		        echo '<p class="out-of-stock" >' . __( 'Brak', 'envy' ) . '</p>';
+		    }
+		}
+		elseif (pll_current_language() == 'en') {
+			if ( $product->is_in_stock() ) {
+				echo '<p class="stock" >' . $product->get_stock_quantity() . __( 'In stock', 'envy' ) . '</p>';
+
+			} else {
+				echo '<p class="out-of-stock" >' . __( 'Out of stock', 'envy' ) . '</p>';
+			}
+		}
+
 	}
 	add_action( 'woocommerce_after_shop_loop_item_title', 'stock_diaplay' );
 
@@ -81,6 +93,13 @@
 		$args['posts_per_page'] = 3; // 4 related products
 		$args['columns'] = 4; // arranged in 2 columns
 		return $args;
+	}
+
+	add_action( 'after_setup_theme', 'lightbox_' );
+	function yourtheme_setup() {
+	add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+	add_theme_support( 'wc-product-gallery-slider' );
 	}
 
 	// remove wp version number in head

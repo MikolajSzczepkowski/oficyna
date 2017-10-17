@@ -39,6 +39,10 @@
 						right: -138%;
 						font-style: italic;
 						text-transform: lowercase;
+
+						html[lang="en-GB"] & {
+							content: ("– make print great again");
+						}
 					}
 				}
 			}
@@ -201,7 +205,7 @@
 			}
 		}
 		&:hover {
-			.add_to_cart_button {
+			.add_to_cart_button, .ajax_add_to_cart {
 				display: flex !important;
 			}
 		}
@@ -260,7 +264,8 @@
 				transition: opacity .3s;
 			}
 		}
-		.add_to_cart_button {
+		.add_to_cart_button,
+		.ajax_add_to_cart {
 			display: none !important;
 			justify-content: center;
 			align-items: center;
@@ -719,6 +724,11 @@
 				margin-right: 3.8% !important;
 			}
 		}
+
+		.wpis-popup {
+			width: 100%;
+			height: 100%;
+		}
 	}
 	.summary {
 		.stock,
@@ -736,7 +746,6 @@
 			display: none;
 		}
 		select {
-			font-family: $headingFont !important;
 			min-width: 70%;
 			padding: 5px;
 			background-color: $white;

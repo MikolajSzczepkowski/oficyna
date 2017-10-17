@@ -1,4 +1,4 @@
-<?php get_header( 'shop' ); ?>
+<?php get_header( 'shop-en' ); ?>
 
 <?php $is_using_vc = get_post_meta( get_the_ID(), '_wpb_vc_js_status', true ); ?>
 
@@ -13,6 +13,20 @@
 
 						<article id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<?php the_content(); ?>
+							<ul>
+								<?php
+
+								$authors = get_terms( 'pa_autor', array(
+								    'orderby'    => 'ASC',
+								    'hide_empty' => 0
+								) );
+								foreach( $authors as $author ) {
+									$author_link = get_term_link( $author->slug, 'pa_autor' );
+									echo '<li class=""><a href="' . $author_link . '">' . $author->name . '</a></li>';
+								}
+
+	 							?>
+							</ul>
 						</article>
 
 					</div>

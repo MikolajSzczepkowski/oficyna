@@ -19,8 +19,9 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-
-get_header( 'shop' ); ?>
+if ( pll_current_language() == 'pl' ) : get_header( 'shop' ); else : get_header( 'shop-en' ); endif;
+?>
+   <?php if ( pll_current_language() == 'pl' ) : else : pll_the_languages(array('show_flags'=>1,'hide_current'=>1)); endif; ?>
 	<div class="shop-header">
 
 		<?php if ( is_shop() ) :?>
@@ -47,6 +48,8 @@ get_header( 'shop' ); ?>
 		* @hooked woocommerce_breadcrumb - 20
 		*/
 		do_action( 'woocommerce_before_main_content' );
+
+
 		?>
 
 		<div class="col-md-9 col-md-push-3 shop-main">
@@ -54,15 +57,22 @@ get_header( 'shop' ); ?>
 			<?php if ( is_shop() ) :?>
 
 				<h3 class="widget-title">
-					<span>Nowości</span>
+					<span><?php if ( pll_current_language() == 'pl' ) : ?>Nowości<?php else : ?>New Releases<?php endif; ?></span>
 				</h3>
-				<?php echo do_shortcode('[product_category category="nowosci-pl"]'); ?>
+				<?php if ( pll_current_language() == 'pl' ) : ?>
+					<?php echo do_shortcode('[product_category category="nowosci"]'); ?>
+				<?php else : ?>
+					<?php echo do_shortcode('[product_category category="new-releases"]'); ?>
+				<?php endif; ?>
 
 				<h3 class="widget-title">
-					<span>Bestsellery</span>
+					<span><?php if ( pll_current_language() == 'pl' ) : ?>Bestsellery<?php else : ?>Bestsellers<?php endif; ?></span>
 				</h3>
-				<?php echo do_shortcode('[product_category category="bestsellery"]'); ?>
-
+				<?php if ( pll_current_language() == 'pl' ) : ?>
+					<?php echo do_shortcode('[product_category category="bestsellery"]'); ?>
+				<?php else : ?>
+					<?php echo do_shortcode('[product_category category="bestsellers"]'); ?>
+				<?php endif; ?>
 			<?php else: ?>
 
 				<h3 class="widget-title">
