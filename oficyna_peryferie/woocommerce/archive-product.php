@@ -21,7 +21,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 if ( pll_current_language() == 'pl' ) : get_header( 'shop' ); else : get_header( 'shop-en' ); endif;
 ?>
-   <?php if ( pll_current_language() == 'pl' ) : else : pll_the_languages(array('show_flags'=>1,'hide_current'=>1)); endif; ?>
 	<div class="shop-header">
 
 		<?php if ( is_shop() ) :?>

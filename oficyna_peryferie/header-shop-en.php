@@ -348,6 +348,9 @@
 					<i class="fa fa-search" aria-hidden="true"></i>
 					<?php  echo do_shortcode('[yith_woocommerce_ajax_search]'); ?>
 				</div>
+				<ul class="shop-lang-switcher">
+					<?php if ( pll_current_language() == 'pl' ) : else : pll_the_languages(array('show_flags'=>1,'hide_current'=>1)); endif; ?>
+				</ul>
 			</div>
 			<?php
 			$pages_with_title_section = willow_option( 'pages_with_title_section', array() );

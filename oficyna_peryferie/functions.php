@@ -95,6 +95,25 @@
 		return $args;
 	}
 
+	add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+
+	// Our hooked in function - $fields is passed via the filter!
+	function custom_override_checkout_fields( $fields ) {
+		if ( pll_current_language() == 'pl' ) : $fields['billing']['billing_rachunek']['label'] = 'Czy chcesz otrzymać rachunek?';
+		else : $fields['billing']['billing_rachunek']['label'] = 'Do You want to recieve a bill?'; endif;
+
+		return $fields;
+	}
+
+	add_filter( 'woocommerce_gateway_method_title', 'custom_override_method_descritption' );
+
+	function custom_override_method_descritption( $field ) {
+		if ( pll_current_language() == 'pl' ) : $field = 'Płacisz z';
+		else : $field = 'Pay with'; endif;
+
+	    return $field;
+	}
+
 	add_action( 'after_setup_theme', 'lightbox_' );
 	function yourtheme_setup() {
 	add_theme_support( 'wc-product-gallery-zoom' );

@@ -74,11 +74,21 @@ h4,
 .sidebar-categories li a,
 .menu li a,
 address {
-    font-size: 1.4em !important;
-    line-height: 1.5 !important;
+    font-size: 1.2em !important;
+    line-height: 1.3 !important;
+
+    @include netbook {
+        font-size: 1.4em !important;
+        line-height: 1.5 !important;
+    }
 }
 
 .bigger-text {
-	font-size: 1.6em !important;
-	line-height: 1.5 !important;
+    font-size: 1.4em !important;
+    line-height: 1.3 !important;
+
+    @include netbook {
+        font-size: 1.6em !important;
+    	line-height: 1.5 !important;
+    }
 }
