@@ -20,7 +20,7 @@
 					'orderby'        => 'rand',
 					'order'          => 'DESC',
 					'post_type'      => 'post',
-					'posts_per_page' => 4,
+					'posts_per_page' => 3,
 					'post__not_in'   => array( get_the_ID() ),
 					'category__in'   => $cat_arr,
 					'post_status'    => 'publish',

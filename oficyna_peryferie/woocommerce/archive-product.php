@@ -59,18 +59,18 @@ if ( pll_current_language() == 'pl' ) : get_header( 'shop' ); else : get_header(
 					<span><?php if ( pll_current_language() == 'pl' ) : ?>Nowości<?php else : ?>New Releases<?php endif; ?></span>
 				</h3>
 				<?php if ( pll_current_language() == 'pl' ) : ?>
-					<?php echo do_shortcode('[product_category category="nowosci"]'); ?>
+					<?php echo do_shortcode('[product_category orderby="date" order="DESC" category="nowosci"]'); ?>
 				<?php else : ?>
-					<?php echo do_shortcode('[product_category category="new-releases"]'); ?>
+					<?php echo do_shortcode('[product_category orderby="date" order="DESC" category="new-releases"]'); ?>
 				<?php endif; ?>
 
 				<h3 class="widget-title">
 					<span><?php if ( pll_current_language() == 'pl' ) : ?>Bestsellery<?php else : ?>Bestsellers<?php endif; ?></span>
 				</h3>
 				<?php if ( pll_current_language() == 'pl' ) : ?>
-					<?php echo do_shortcode('[product_category category="bestsellery"]'); ?>
+					<?php echo do_shortcode('[product_category orderby="date" order="DESC" category="bestsellery"]'); ?>
 				<?php else : ?>
-					<?php echo do_shortcode('[product_category category="bestsellers"]'); ?>
+					<?php echo do_shortcode('[product_category orderby="date" order="DESC" category="bestsellers"]'); ?>
 				<?php endif; ?>
 			<?php else: ?>
 

@@ -114,6 +114,33 @@
 	    return $field;
 	}
 
+
+	add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
+
+	function new_loop_shop_per_page( $cols ) {
+		// $cols contains the current number of products per page based on the value stored on Options -> Reading
+		// Return the number of products you wanna show per page.
+		$cols = 24;
+		return $cols;
+	}
+
+	// add_action('wp_head', 'currency_change_lang');
+	// function currency_change_lang(){
+	// 	lang = get_locale();
+	//     global $WOOCS;
+	//     switch ($lang)
+	//     {
+	//         case 'en_GB':
+	//             $WOOCS->current_currency = 'EUR';
+	//             $WOOCS->storage->set_val('woocs_current_currency', 'EUR');
+	//             break;
+	//         default:
+	//             $WOOCS->current_currency = 'PLN';
+	//             $WOOCS->storage->set_val('woocs_current_currency', 'PLN');
+	//             break;
+	//     }
+	// }
+
 	add_action( 'after_setup_theme', 'lightbox_' );
 	function yourtheme_setup() {
 	add_theme_support( 'wc-product-gallery-zoom' );
