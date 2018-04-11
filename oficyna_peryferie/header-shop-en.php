@@ -351,9 +351,9 @@
 				<ul class="shop-lang-switcher">
 					<?php if ( pll_current_language() == 'pl' ) : else : pll_the_languages(array('show_flags'=>1,'hide_current'=>1)); endif; ?>
 				</ul>
-				<!-- <div class="currency-switcher">
+				<div class="currency-switcher">
 					<?php if ( pll_current_language() == 'pl' ) : else : echo do_shortcode('[woocs show_flags=0 flag_position="right" txt_type="desc"]'); endif; ?>
-				</div> -->
+				</div>
 			</div>
 			<?php
 			$pages_with_title_section = willow_option( 'pages_with_title_section', array() );
